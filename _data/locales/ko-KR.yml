@@ -3,29 +3,29 @@
 # ----- Commons label -----
 
 layout:
-  post: 포스트
-  category: 카테고리
-  tag: 태그
+  post: POST
+  category: CATAGORIES
+  tag: TAGS
 
 # The tabs of sidebar
 tabs:
   # format: <filename_without_extension>: <value>
-  home: 홈
-  categories: 카테고리
-  tags: 태그
-  archives: 아카이브
-  about: 정보
+  home: Home
+  categories: Catagories
+  tags: Tags
+  archives: Archives
+  about: About
 
 # the text displayed in the search bar & search results
 search:
   hint: 검색
-  cancel: 취소
+  cancel: X
   no_results: 검색 결과가 없습니다.
 
 panel:
-  lastmod: 최근 업데이트
-  trending_tags: 인기 태그
-  toc: 바로가기
+  lastmod: Recent Update
+  trending_tags: Trend Tags
+  toc: Link
 
 copyright:
   # Shown at the bottom of the post
@@ -58,7 +58,7 @@ post:
   words: 단어
   pageview_measure: 조회
   read_time:
-    unit: 분
+    unit: m
     prompt: 읽는 시간
   relate_posts: 관련된 글
   share: 공유하기
@@ -77,8 +77,8 @@ post:
 # See: <http://strftime.net/>, <https://day.js.org/docs/en/display/format>
 df:
   post:
-    strftime: '%Y/%m/%d'
-    dayjs: 'YYYY/MM/DD'
+    strftime: "%Y/%m/%d"
+    dayjs: "YYYY/MM/DD"
 
 # categories page
 categories:
