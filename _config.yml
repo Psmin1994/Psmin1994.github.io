@@ -29,7 +29,7 @@ description: >- # used by seo meta and the atom feed
 url: "https://psmin1994.github.io/"
 
 github:
-  username: Psmin94 # change to your github username
+  username: Psmin1994 # change to your github username
 
 # twitter:
 #   username: twitter_username # change to your twitter username
@@ -37,12 +37,12 @@ github:
 social:
   # Change to your full name.
   # It will be displayed as the default author of the posts and the copyright owner in the Footer
-  name: Psmin94
+  name: Psmin1994
   email: tkdals6405@gmail.com # change to your email address
   links:
     # The first element serves as the copyright owner's link
     # - https://twitter.com/username      # change to your twitter homepage
-    - https://github.com/Psmin94 # change to your github homepage
+    - https://github.com/Psmin1994 # change to your github homepage
     # Uncomment below to add more social links
     # - https://www.facebook.com/username
     # - https://www.linkedin.com/in/username
