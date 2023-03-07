@@ -1,5 +1,5 @@
 ---
-title: 네트워크 - OSI 7 계층 참조 모델
+title: OSI 7 계층 참조 모델
 author: Psmin
 data: 2022-12-17 19:39:23 +0900
 categories: [Knowledge]
@@ -42,7 +42,6 @@ tags: [OSI, Protocol]
   프레임에 **_물리적 주소(MAC address)_**를 부여하여 <u>오류 검출, 재전송, 흐름 제어 등</u>을 수행합니다.
 
   즉, 하나의 LAN 대역에서 송수신지와 오류 검출을 담당합니다.
-
 
   - **_대표 프로토콜_** : `Ethernet` 등
   - **_관련 장비_** : 랜카드, 브리지, 스위치
