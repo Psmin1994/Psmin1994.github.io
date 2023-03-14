@@ -1,5 +1,5 @@
 ---
-title: 템플릿 리터털, 화살표 함수 (+ ES6 추가 기능)
+title: 템플릿 리터털, 화살표 함수
 author: Psmin
 data: 2022-12-24 14:21:23 +0900
 categories: [Nodejs]
@@ -7,8 +7,6 @@ tags: [Template Literal, Arrow Function]
 ---
 
 # 템플릿 리터럴과 화살표 함수에 대해 알아보자.
-
-- 추가로 ES6에서 추가된 기능들을 간단하게 정리해보자.
 
 ---
 
