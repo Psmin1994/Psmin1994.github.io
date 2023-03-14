@@ -1,12 +1,12 @@
 ---
-title: Template Literal (템플릿 리터럴)
+title: 템플릿 리터털, 화살표 함수 (+ ES6 추가 기능)
 author: Psmin
 data: 2022-12-24 14:21:23 +0900
 categories: [Nodejs]
-tags: [Template Literal, ES6]
+tags: [Template Literal, Arrow Function]
 ---
 
-# 템플릿 리터럴에 대해 알아보자.
+# 템플릿 리터럴과 화살표 함수에 대해 알아보자.
 
 - 추가로 ES6에서 추가된 기능들을 간단하게 정리해보자.
 
@@ -139,7 +139,122 @@ this 바인딩은 크게 4가지 규칙이 있습니다.
    ```
 
 4. `new Binding `
+   자바스크립트의 <kbd>new 키워드</kbd>는 함수를 호출할 때 앞에 new 키워드를 사용하는 것으로 객체를 초기화할 때 사용합니다.  
+   이때 사용되는 함수를 생성자 함수라고 하며, 생성자 함수는 대문자로 시작합니다.
 
-```
+   즉, 함수 앞에 <kbd>new</kbd>를 붙이면 return 값으로 객체를 반환합니다.
 
-```
+   여기서 생성자 함수에서는 this는 생성자 함수로 생성할 객체에 바인딩됩니다.
+
+   ```js
+   function Foo() {
+     this.a = 20;
+   }
+
+   const foo = new Foo();
+
+   console.log(foo.a); // 20
+   ```
+
+---
+
+### 화살표 함수의 this 바인딩
+
+ES6에 추가된 화살표 함수(Arrow Function)는 this를 바인딩할 때 앞서 설명한 규칙들이 적용되지 않습니다.
+
+this에 Lexical scope가 적용되어 화살표 함수를 정의하는 시점의 컨텍스트 객체가 this에 바인딩된다.
+
+쉽게 말하면 function으로 선언한 함수가 메소드로 호출되냐 함수 자체로 호출되냐에 따라 동적으로 this가 바인딩되는 반면, 화살표 함수는 `선언될 시점에서의 상위 스코프`가 this로 바인딩됩니다.
+
+즉, this가 없기 때문에 상위 외부 함수에서 this를 가져옵니다.
+
+이러한 특성 때문에 화살표 함수 사용에 몇몇의 제약이 생깁니다.
+
+---
+
+### 화살표 함수를 사용하면 안될 때
+
+- 메소드 정의  
+  화살표 함수로 메소드를 정의하면 메소드를 호출한 객체가 아닌 상위 컨택스트인 전역 객체 window를 가르킵니다.
+
+  ```js
+  const foo = {
+    tmp: "hello",
+    log: () => console.log(`${this.tmp}`),
+  };
+
+  foo.log(); // undefined
+  ```
+
+- prototype 메소드  
+  prototype에 할당할 경우에도 같은 문제가 발생합니다.
+
+  ```js
+  const foo = {
+    tmp: "hello",
+  };
+
+  Object.prototype.log = () => console.log(`${this.tmp}`);
+
+  foo.log(); // undefined
+  ```
+
+- new 생성자 함수  
+  생성자 함수는 prototype 프로퍼티를 가지고 있으며 해당 프로퍼티가 가리키는 프로토타입 객체의 constructor를 사용합니다.
+
+  화살표 함수는 prototype 프로퍼티를 가지고 있지 않습니다.  
+  따라서, 화살표 함수를 생성자함수로 사용하면 에러가 납니다.
+
+  ```js
+  const Foo = (name) => {
+    this.name = name;
+  };
+
+  // 화살표 함수는 prototype 프로퍼티가 없다
+  console.log(Foo.hasOwnProperty("prototype")); // false
+
+  const foo = new Foo("June"); // TypeError: Foo is not a constructor
+  ```
+
+- addEventListener 함수의 콜백 함수  
+  addEventListener 함수의 콜백 함수를 화살표 함수로 정의하면 this가 상위 컨택스트인 전역 객체 window를 가리키게 됩니다.
+
+  따라서, function 키워드로 정의한 일반 함수를 사용하여야 합니다.  
+  (상위 스코프의 속성들을 사용하기위해 의도한 경우 사용할 수 있습니다.)
+
+  ```js
+  var button = document.getElementById("myButton");
+
+  button.addEventListener("click", () => {
+    console.log(this === window); // => true
+    this.innerHTML = "Clicked button";
+  });
+
+  button.addEventListener("click", function () {
+    console.log(this === button); // => true
+    this.innerHTML = "Clicked button";
+  });
+  ```
+
+- call, apply, bind 메소드  
+  화살표 함수는 call, apply, bind 메소드를 사용하여 this를 변경할 수 없습니다.
+
+  ```js
+  window.x = 1;
+  const normal = function () {
+    return this.x;
+  };
+  const arrow = () => this.x;
+
+  console.log(normal.call({ x: 10 })); // 10
+  console.log(arrow.call({ x: 10 })); // 1
+  ```
+
+---
+
+## 참조
+
+- <https://velog.io/@takeknowledge/javscript-ES6%EC%97%90-%EC%B6%94%EA%B0%80%EB%90%9C-%EA%B8%B0%EB%8A%A5-%EA%B0%84%EB%8B%A8-%EC%A0%95%EB%A6%AC#2-%EA%B0%9D%EC%B2%B4-%EB%B9%84%EA%B5%AC%EC%A1%B0%ED%99%94--object-destructuring->
+- <https://velog.io/@tkejt1343/Javascript-ES6%EC%97%90-%EC%B6%94%EA%B0%80%EB%90%9C-%EA%B2%83%EC%9D%80#arrow-function%ED%99%94%EC%82%B4%ED%91%9C-%ED%95%A8%EC%88%98>
+- <https://velog.io/@padoling/JavaScript-%ED%99%94%EC%82%B4%ED%91%9C-%ED%95%A8%EC%88%98%EC%99%80-this-%EB%B0%94%EC%9D%B8%EB%94%A9>
+- <https://inpa.tistory.com/entry/JS-%F0%9F%93%9A-%EC%9E%90%EB%B0%94%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8-%ED%99%94%EC%82%B4%ED%91%9C-%ED%95%A8%EC%88%98-%EC%A0%95%EB%A6%AC>
