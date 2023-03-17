@@ -1,5 +1,5 @@
 ---
-title: body-parser 미들웨어란?
+title: 미들웨어 - body-parser
 author: Psmin
 data: 2022-12-27 16:23:53 +0900
 categories: [Nodejs]
