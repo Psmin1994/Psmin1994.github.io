@@ -1,5 +1,5 @@
 ---
-title: 미들웨어 - body-parser
+title: Node.js의 body-parser 모듈
 author: Psmin
 data: 2022-12-27 16:23:53 +0900
 categories: [Nodejs]
@@ -12,7 +12,7 @@ tags: [Body-Parser]
 
 ## body-parser
 
-HTTP 의 post, put 요청시 HTTP 의 본문(body)를 parsing 하여 나온 결과값을 req.body 에 넣어 body 프로퍼티를 사용할 수 있도록 하는 미들웨어입니다.
+HTTP 의 post, put 요청시 HTTP 의 본문(body)를 parsing 하여 나온 결과값을 req.body 에 넣어 body 프로퍼티를 사용할 수 있도록 합니다.
 
 아래의 테스트 코드에서 req.body를 콘솔로그로 출력해보면 undefined가 출력합니다.
 
@@ -25,7 +25,7 @@ app.get("/test", (req, res) => {
 });
 ```
 
-body-parser 미들웨어를 이용하면, request의 body부분을 자신이 원하는 형태로 파싱하여 활용할 수 있습니다.
+body-parser 모듈로 미들웨어 함수를 등록하면, request의 body부분을 자신이 원하는 형태로 파싱하여 활용할 수 있습니다.
 
 ---
 
