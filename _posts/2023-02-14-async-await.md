@@ -1,7 +1,7 @@
 ---
 title: async / await 란?
 author: Psmin
-data: 2023-02-02 04:11:12 +0900
+data: 2023-02-14 04:11:12 +0900
 categories: [Javascript]
 tags: [Javascript, Async/Await]
 ---
