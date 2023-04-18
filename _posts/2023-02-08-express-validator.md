@@ -1,7 +1,7 @@
 ---
 title: express-validator 모듈이란?
 author: Psmin
-data: 2023-02-03 22:41:12 +0900
+data: 2023-02-08 22:41:12 +0900
 categories: [Nodejs]
 tags: [express-validator]
 ---
