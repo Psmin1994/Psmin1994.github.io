@@ -20,7 +20,7 @@ timezone: Asia/Seoul
 
 title: Psmin94 # the main title
 
-tagline: Ps. Dev # it will display as the sub-title
+tagline: Ps. Node-Dev # it will display as the sub-title
 
 description: >- # used by seo meta and the atom feed
   FullStack Developer
