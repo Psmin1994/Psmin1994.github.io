@@ -229,6 +229,22 @@ express-validator 모듈은 express에서 주로 사용하는 유효성 검사 �
 
 ---
 
+## Validation Results
+
+- `validationResult()`  
+  : 유효성 검사 결과를 추출하고 Result 객체에 반환합니다.
+
+  ```js
+  const { query, validationResult } = require("express-validator");
+
+  app.post("/hello", query("person").notEmpty(), (req, res) => {
+    const result = validationResult(req);
+    // Use `result` to figure out if the request is valid or not
+  });
+  ```
+
+---
+
 # 참조
 
 - <https://express-validator.github.io/docs/api/validation-chain#standard-validators>
