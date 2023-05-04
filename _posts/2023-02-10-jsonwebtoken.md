@@ -41,8 +41,65 @@ jsonwebtoken 모듈은 함수이므로 따로 미들웨어로 등록하지 않�
 
 토큰 검증 메서드로 `verify` 메서드를 사용합니다.
 
+여기서 검증은 서버에서 발급한 토큰이 맞는 지 확인하는 것을 말합니다.
+
+- `jwt.verify(token, secretkey, [options, callback])` 형태
+  - **_token_** : 검증 할 토큰을 입력합니다.
+  - **_secretkey_** : 해당 토큰을 생성할 때 사용한 secretkey를 입력합니다.
+  - **_options_** : 추가 옵션으로 객체 형태로 입력합니다.
+  - **_callback_** : 콜백 추가시 비동기적으로 수행되며 에러와 결과를 반환합니다.
+
+---
+
+## 간단 예제
+
+1. 토큰 생성 해보기
+   sign 메서드에 첫 번째 인자로 주어진 정보가 verify 메서드로 확인시 잘 나오는지 확인해보자.
+
+   ```js
+   import jwt from "jsonwebtoken";
+
+   var token = jwt.sign(
+     {
+       test: "test",
+     },
+     "secretkey",
+     {
+       subject: "test jwttoken",
+       expiresIn: "60s",
+       issuer: "psmin",
+     }
+   );
+
+   console.log(token);
+   ```
+
+   ![jwt-ex-01](/assets/img/jwt-ex-01.png){: .w-80 .normal}
+
+2. 생성한 토큰 검증해보기
+
+   ```js
+   import jwt from "jsonwebtoken";
+
+   var token = {
+     ...
+   }
+
+   var check = jwt.verify(token, "secretkey", (err, result) => {
+     if (err) return err;
+
+     return result;
+   });
+
+   console.log(check);
+
+   ```
+
+   ![jwt-ex-02](/assets/img/jwt-ex-02.png){: .w-80 .normal}
+
 ---
 
 ## 참조
 
 - <https://www.npmjs.com/package/jsonwebtoken>
+- <https://wky.kr/39>
