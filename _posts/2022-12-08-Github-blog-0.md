@@ -24,7 +24,7 @@ SW 개발에 필요한 소스 코드를 관리할 수 있게 해주며 **Linux**
 
 ### Git 설치
 
-- **Git 홈페이지**(<https://git-scm.com/>)로 이동합니다.  
+- [Git 홈페이지](https://git-scm.com/)로 이동합니다.  
   홈페이지에 접속하면 아래의 사진과 같은 모습이 나옵니다. (2022-12-11 작성)  
   <br/>
   ![git-page](/assets/img/git-page.png){: .normal .w-75}  
@@ -78,7 +78,7 @@ SW 개발에 필요한 소스 코드를 관리할 수 있게 해주며 **Linux**
 
 ### VScode 설치
 
-**VScode 홈페이지**(<https://visualstudio.microsoft.com/ko/>)로 이동합니다.  
+[VScode 홈페이지](https://visualstudio.microsoft.com/ko/)로 이동합니다.  
 ![vscode-page](/assets/img/vscode-page.png){: .normal .w-75}  
 <br/>
 아래로 스크롤을 내려서 Visual Studio Code를 찾습니다.
