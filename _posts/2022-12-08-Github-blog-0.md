@@ -6,7 +6,7 @@ categories: [Github, blog]
 tags: [Git, VScode]
 ---
 
-## Git, VScode 설치 (+ Git Bash)
+# Git, VScode 설치 (+ Git Bash)
 
 ---
 
