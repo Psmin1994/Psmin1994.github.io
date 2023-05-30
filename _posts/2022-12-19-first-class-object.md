@@ -2,7 +2,7 @@
 title: 일급 객체 (First Class Object)
 author: Psmin
 data: 2022-12-19 20:30:31 +0900
-categories: [Javascript]
+categories: [Knowledge, Javascript]
 tags: [Javascript]
 ---
 

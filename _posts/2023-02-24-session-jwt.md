@@ -2,7 +2,7 @@
 title: 세션 기반 인증, 토큰 기반 인증
 author: Psmin
 data: 2023-02-24 18:10:26 +0900
-categories: [Knowledge]
+categories: [Knowledge, CS]
 tags: [Session, JWT]
 ---
 

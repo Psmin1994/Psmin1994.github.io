@@ -2,7 +2,7 @@
 title: OSI 7 계층 참조 모델
 author: Psmin
 data: 2022-12-17 19:39:23 +0900
-categories: [Knowledge]
+categories: [Knowledge, CS]
 tags: [OSI, Protocol]
 ---
 

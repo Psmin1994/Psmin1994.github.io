@@ -2,7 +2,7 @@
 title: express-validator 모듈
 author: Psmin
 data: 2023-02-06 22:41:12 +0900
-categories: [Nodejs]
+categories: [Knowledge, Nodejs]
 tags: [express-validator]
 ---
 

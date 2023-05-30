@@ -2,7 +2,7 @@
 title: 템플릿 리터털, 화살표 함수
 author: Psmin
 data: 2023-01-02 14:21:23 +0900
-categories: [Nodejs]
+categories: [Knowledge, Nodejs]
 tags: [Template Literal, Arrow Function]
 ---
 

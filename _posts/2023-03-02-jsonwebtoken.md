@@ -2,7 +2,7 @@
 title: jsonwebtoken 모듈
 author: Psmin
 data: 2023-03-02 21:23:16 +0900
-categories: [Nodejs]
+categories: [Knowledge, Nodejs]
 tags: [jsonwebtoken]
 ---
 

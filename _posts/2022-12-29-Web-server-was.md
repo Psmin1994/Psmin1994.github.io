@@ -2,7 +2,7 @@
 title: Web Server와 Was
 author: Psmin
 data: 2022-12-29 02:39:23 +0900
-categories: [Knowledge]
+categories: [Knowledge, CS]
 tags: [Web Server, Was]
 ---
 

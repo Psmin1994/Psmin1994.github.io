@@ -2,7 +2,7 @@
 title: Javascript 동작 원리
 author: Psmin
 data: 2022-12-15 16:18:32 +0900
-categories: [Javascript]
+categories: [Knowledge, Javascript]
 tags: [Javascript]
 ---
 

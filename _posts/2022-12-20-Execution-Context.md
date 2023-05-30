@@ -2,7 +2,7 @@
 title: ES6의 실행 컨텍스트 (Execution Context)
 author: Psmin
 data: 2022-12-20 03:16:45 +0900
-categories: [Javascript]
+categories: [Knowledge, Javascript]
 tags: [Javascript]
 ---
 

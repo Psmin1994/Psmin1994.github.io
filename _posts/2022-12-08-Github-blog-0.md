@@ -2,7 +2,7 @@
 title: Github 블로그 만들기 By Chirpy, VScode - 0
 author: Psmin
 data: 2022-12-08 20:30:31 +0900
-categories: [Github]
+categories: [Project, Github]
 tags: [Git, VScode]
 ---
 
