@@ -6,87 +6,210 @@ categories: [Knowledge, Javascript]
 tags: [Prototype]
 ---
 
-## 프로토타입 (Prototype)
+## 프로토타입 기반 언어
 
-Java, C++과 같은 클래스 기반 객체지향 프로그래밍 언어와 달리 자바스크립트는 프로토타입 기반 객체지향 프로그래밍 언어입니다.
+Java, C++과 같은 클래스 기반 객체지향 프로그래밍 언어와 달리 자바스크립트는 ES6에서 Class(이하 클래스)가 도입되었지만 프로토타입 기반 언어입니다.
+
+객체 원형인 프로토타입을 이용해 새로운 객체를 생성합니다. 생성된 객체는 또 다른 객체의 원형이 될 수 있습니다.
+
+프로토타입은 객체를 확장하고 객체 지향적인 프로그래밍을 할 수 있도록 도와줍니다.
+
 따라서 자바스크립트의 동작 원리를 이해하기 위해서는 프로토타입의 개념을 잘 이해하고 있어야 합니다.
 
-자바스크립트는 ES6에서 Class(이하 클래스)가 도입되었지만 프로토타입 기반 언어이므로, 다른 언어에서 사용되는 클래스와 동작 방식이 약간 다릅니다.
+프로토타입은 크게 2가지가 있습니다.
 
-자바스크립트의 모든 객체는 자신의 부모 역할을 담당하는 객체와 연결되어 있습니다.  
-이것은 마치 객체 지향의 상속 개념과 같이 부모 객체의 프로퍼티 또는 메소드를 상속받아 사용할 수 있게 해줍니다.  
-이러한 부모 객체를 **_Prototype(프로토타입) 객체_** 또는 줄여서 **_Prototype(프로토타입)_**이라 한다.
+먼저 프로토타입 객체를 참조하는 `prototype 속성`이 있고, 객체 멤버인 proto 속성이 참조하는 숨은 링크가 있습니다.
 
-```js
-var student = {
-  name: "Lee",
-  score: 90,
-};
-
-// student에는 hasOwnProperty 메소드가 없지만 아래 구문은 동작한다.
-console.log(student.hasOwnProperty("name")); // true
-```
-
-![prototype-ex](/assets/img/prototype-ex.png){: .w-80}
-
-[[Prototype]]의 값은 Prototype(프로토타입) 객체이며 \_\_proto\_\_ 로 접근할 수 있습니다.  
-\_\_proto\_\_ 프로퍼티에 접근하면 내부적으로 `Object.getPrototypeOf`가 호출되어 프로토타입 객체를 반환하게됩니다.
-
-student 객체는 **proto** 프로퍼티로 자신의 부모 객체(프로토타입 객체)인 Object.prototype을 가리키고 있습니다.
-
-```js
-console.log(student.__proto__ === Object.prototype); // true
-```
-
-객체를 생성할 때 프로토타입은 결정됩니다.  
-결정된 프로토타입 객체는 다른 임의의 객체로 변경할 수 있습니다.  
-이것은 부모 객체인 프로토타입을 동적으로 변경할 수 있다는 것을 활용하여 객체의 상속을 구현할 수 있습니다.
+둘의 차이점을 이해하기 위해 함수와 객체 내부 구조부터 알아보겠습니다.
 
 ---
 
-## 속성 추가
+### 함수와 객체의 내부 구조
 
-자바와 같은 대부분의 언어에서는 클래스의 메소드가 클래스와 동시에 정의되지만 자바스크립트에서는 함수를 Class의 자바스크립트 Object 속성으로 추가합니다.
-
-`this.functionName = function() {}` 을 사용해 함수를 추가합니다.
+예제와 함께 살펴보겠습니다.
 
 ```js
-function ExampleClass() {
-  this.name = "Javascript";
-  // 함수 추가
-  this.sayName = function () {
-    console.log(this.name);
-  };
-}
-
-// 객체 인스턴스 생성
-let object1 = new ExampleClass();
-object1.sayName(); // Javascript
+function Person() {}
 ```
 
-생성자에서 sayName 함수를 동적으로 추가합니다. 이를 **_프로토타입 활용 상속_**이라고 합니다.
+속성이 없는 Person 함수를 정의했습니다. 파싱 단계에 들어가면, Person 함수 Prototype 속성은 프로토타입 객체를 참조합니다.
 
-- .prototype 속성을 사용해 해당 객체의 Object 속성을 동적으로 확장할 수 있습니다.
+프로토타입 객체 멤버인 constructor 속성은 Person 함수를 참조하는 구조를 갖습니다.
+
+{: .prompt-tip}
+
+> 여기서 중요한 것은 Person 함수의 prototype 속성이 참조하는 프로토타입 객체는 new라는 연산자와 Person 함수를 통해 생성된 모든 객체(인스턴스)의 원형이 되는 객체입니다.  
+> 생성된 모든 객체가 참조하는 것을 기억합시다.
 
 ```js
-function ExampleClass() {
-  this.array = [1, 2, 3, 4];
-  this.name = "Javascript";
-}
+function Person() {}
 
-let object = new ExampleClass();
+var joon = new Person();
+var jisoo = new Person();
+```
 
-Example.prototype.sayName = function () {
-  console.log(this.name);
+![prototype-01](/assets/img/prototype-01.png){: .w-80}
+
+---
+
+## 프로토타입 객체
+
+프로토타입 객체란 함수를 정의하면 다른 곳에 생성되는 다른 객체의 원형이 되는 객체입니다.
+
+생성된 모든 객체는 프로토타입 객체에 접근할 수 있습니다.
+
+즉, 같은 원형을 갖는 객체는 프로토타입 객체에 추가된 프로퍼티나 메서드를 사용할 수 있습니다.
+
+추가되기 전 생성된 객체들도 사용할 수 있습니다.
+
+```js
+function Person() {}
+
+var joon = new Person();
+
+Person.prototype.getType = function () {
+  console.log("Hi");
 };
 
-object.sayName(); // Javascript
+joon.getType(); // Hi
 ```
 
-즉, 생성자에서 추가하거나 .prototype 속성을 통해 추가할 수 있습니다.
+![prototype-02](/assets/img/prototype-02.png){: .w-80}
 
-> 둘의 차이는 무엇일까요?
+---
 
-생성자에서 추가된 경우는 생성된 객체의 인스턴스는 공통 프로퍼티이지만 각각 해당 프로퍼티를 갖고 있어 메모리가 낭비됩니다.
+생성된 객체에서 프로토타입 객체의 프로퍼티를 수정할 수 있습니다. 다만, 프로토타입 객체에 영향을 주지는 않고 수정한 객체에 해당 프로퍼티가 오버라이딩되어 변경됩니다.
 
-이 때, .prototype 속성으로 구현하여, 인스턴스들이 하나의 프로퍼티를 사용하여 중복을 제거할 수 있습니다.
+```js
+function Person() {}
+
+var jisoo = new Person();
+var joon = new Person();
+
+Person.prototype.getType = function () {
+  console.log("Hi");
+};
+
+joon.getType = function () {
+  console.log("Hi!!!!");
+};
+
+joon.getType(); // Hi!!!!
+jisoo.getType(); // Hi
+
+joon.age = 25;
+
+console.log(joon.age); // 25
+console.log(jisoo.age); // undefined
+```
+
+![prototype-03](/assets/img/prototype-03.png){: .w-80}
+
+---
+
+## 프로토타입
+
+객체는 자신을 만드는데 사용된 원형인 프로토타입 객체를 이용해서 만듭니다.
+
+원형을 바탕으로 생성된 객체 안에는 `__proto__ (비표준)` 속성이 원형 객체인 프로토타입 객체를 참조합니다.
+
+여기서 `__proto__` 를 프로토타입 이라고 정의합니다.
+
+![prototype-04](/assets/img/prototype-04.png){: .w-80}
+
+{: .prompt_tip}
+
+> 함수의 멤버인 .prototype 속성은 프로토타입 객체를 참조
+> `__proto__` 는 자신을 만들어낸 원형인 프로토타입 객체를 참조
+
+---
+
+## 코드의 재사용 (상속?)
+
+자바스크립트는 클래스가 없기 때문에 프로토타입을 이용하여 코드 재사용을 구현해보겠습니다.
+
+- 기본 방법
+  : 부모에 해당하는 함수를 이용하여 객체를 생성합니다.  
+  자식에 해당하는 함수의 prototype 속성을 부모 함수를 이용하여 생성한 객체를 참조하는 방법입니다.
+
+  kor2 객체를 생성할 때 Korean 함수의 인자로 '지수'라고 주었지만 부모 생성자에게 인자를 넘겨주지 않아 name에는 기본값인 혁준이 들어있습니다.
+
+  ```js
+  function Person(name) {
+    this.name = "혁준";
+  }
+
+  Person.prototype.getName = function () {
+    return this.name;
+  };
+
+  // 객체 생성자 함수
+  function Korean(name) {}
+
+  // 해당 생성자 함수의 .prototype 속성을 Person 객체로 설정
+  Korean.prototype = new Person();
+
+  var kor1 = new Korean();
+  // Person의 프로토타입 객체에 선언된 메소드도 사용 가능
+  console.log(kor1.getName()); // 혁준
+
+  var kor2 = new Korean("지수");
+  // Person의 프로토타입 객체에 선언된 메소드도 사용 가능
+  console.log(kor2.getName()); // 혁준
+  ```
+
+  ![prototype-05](/assets/img/prototype-05.png){: .w-80}
+
+- 프로토타입 공유
+  : 부모 생성자를 호출하지 않으면서 프로토타입 객체를 공유하는 방법입니다.
+
+  자식 함수의 .prototype 속성을 부모 함수의 .prototype 속성이 참조하는 객체로 설정합니다.
+
+  자식 함수를 통해 생성된 객체는 부모 함수를 통해 생성된 객체를 거치지 않고 부모 함수의 프로토타입 객체를 부모로 지정하여 객체를 생성합니다.
+
+  ```js
+  function Person(name) {
+    this.name = name || "혁준";
+  }
+
+  Person.prototype.getName = function () {
+    return this.name;
+  };
+
+  // 객체 생성자 함수
+  function Korean(name) {
+    this.name = name;
+  }
+
+  // 자식 함수의 .prototype 속성을 부모 함수의 .prototype 속성이 참조하는 객체로 설정
+  Korean.prototype = Person.prototype;
+
+  var kor1 = new Korean("지수");
+  console.log(kor1.getName()); // 지수
+  ```
+
+  ![prototype-06](/assets/img/prototype-06.png){: .w-80}
+
+- Object.create() 사용
+  : `Object.create()` 를 사용해 객체를 생성과 동시에 프로토타입 객체를 지정합니다.
+
+  첫 번째 매개변수는 부모 객체로 사용할 객체이고, 두 번째 매개변수는 반환될 자식 객체에 추가할 속성입니다.
+
+  ```js
+  var person = {
+    type: "인간",
+    getType: function () {
+      return this.type;
+    },
+    getName: function () {
+      return this.name;
+    },
+  };
+
+  var joon = Object.create(person);
+
+  joon.name = "혁준";
+
+  console.log(joon.getType()); // 인간
+  console.log(joon.getName()); // 혁준
+  ```
