@@ -3,7 +3,7 @@ title: React의 Attributes
 author: Psmin
 data: 2023-03-09 11:23:33 +0900
 categories: [Knowledge, ReactJS]
-tags: [React Attribute]
+tags: [React, React Attribute]
 ---
 
 ## DOM Element의 Attributes

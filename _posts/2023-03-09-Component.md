@@ -3,7 +3,7 @@ title: Component와 Props
 author: Psmin
 data: 2023-03-09 11:23:33 +0900
 categories: [Knowledge, ReactJS]
-tags: [Props, Component]
+tags: [React, Props, Component]
 ---
 
 ## React Component
