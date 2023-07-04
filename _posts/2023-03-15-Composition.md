@@ -76,7 +76,7 @@ function App() {
 }
 ```
 
-<Contacts />와 <Chat />같은 React 엘리먼트는 단지 객체이기 때문에 다른 데이터처럼 prop으로 전달할 수 있습니다.
+`<Contacts />`와 `<Chat />`같은 React 엘리먼트는 단지 객체이기 때문에 다른 데이터처럼 prop으로 전달할 수 있습니다.
 
 ---
 
