@@ -1,5 +1,5 @@
 ---
-title: [[Prototype]]과 __proto__
+title: Prototype과 __proto__
 author: Psmin
 data: 2023-03-31 22:11:56 +0900
 categories: [Knowledge, Javascript]
