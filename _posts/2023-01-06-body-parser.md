@@ -12,7 +12,7 @@ tags: [Body-Parser]
 
 ## body-parser
 
-HTTP 의 post, put 요청시 HTTP 의 본문(body)를 parsing 하여 나온 결과값을 req.body 에 넣어 body 프로퍼티를 사용할 수 있도록 합니다.
+HTTP 의 **_post_**, **_put_** 요청시 HTTP 의 본문(body)를 parsing 하여 나온 결과값을 req.body 에 넣어 body 프로퍼티를 사용할 수 있도록 합니다.
 
 아래의 테스트 코드에서 req.body를 콘솔로그로 출력해보면 undefined가 출력합니다.
 
@@ -77,6 +77,7 @@ HTTP 의 헤더(header) **_Content-Type_** 속성 값이 **_“application/json�
 ### URL-encoded from body parser
 
 HTTP 의 본문(body)를 **_x-www-form-urlencoded_** 으로 파싱합니다.
+
 HTTP 의 헤더(header) **_Content-Type_** 속성 값이 “x-www-form-urlencoded” 이 아닐 경우에는 파싱하지 않습니다.
 
 - 옵션
@@ -111,7 +112,7 @@ app.use(express.urlencoded({ extended: false }));
 
 ---
 
-## 서버 코드
+## 예제 코드
 
 ```js
 import express from "express";
