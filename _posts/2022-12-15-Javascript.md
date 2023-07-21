@@ -14,8 +14,15 @@ tags: [Javascript]
 
 JS engine은 자바스크립트 코드를 실행하는 프로그램 또는 **_인터프리터_**입니다.
 
-> 인터프리터란?  
+> 인터프리터란?
+>
 > 프로그래밍 언어의 소스를 바로 실행하는 컴퓨터 프로그램 또는 환경
+
+인터프리터 방식은 프로그램 전체를 번역 후 실행하는 컴파일러와 달리 프로그램을 1줄씩 번역하는 방식입니다.
+
+컴파일된 실행 파일보다 실행**_속도가 느리고_** 매 실행마다 직접 코드를 구동하기 때문에 **_인터프리터가 있어야한다_**는 단점이 있습니다.
+
+하지만, 간단하게 실시간으로 수정이 가능하고 디버깅 과정이 가볍다는 장점이 있습니다.
 
 대표적인 예로는 **_Google의 V8 엔진_**이 있습니다.
 
@@ -27,8 +34,9 @@ JS engine은 자바스크립트 코드를 실행하는 프로그램 또는 **_�
   - **콜 스택** (**_Call Stack_**)  
     : 코드가 실행되면서 함수의 호출을 스택 형식으로 저장하는 자료구조
 
-<u>Call Stack이 하나</u>이기 때문에 `동기적으로 한 가지 일만 처리` 할 수 있습니다.  
-따라서, Javascript는 `Single-Thread 기반`의 언어입니다.
+<u>Call Stack이 하나</u>이기 때문에 **_동기적으로 한 가지 일만 처리_** 할 수 있습니다.
+
+즉, Javascript는 **_Single-Thread 기반_**의 언어입니다.
 
 - 간단한 Call Stack 예제
 
@@ -57,16 +65,19 @@ JS engine은 자바스크립트 코드를 실행하는 프로그램 또는 **_�
 
 ## Javscript Runtime
 
-JS 엔진은 Single-Thread 기반이기 때문에 수행중인 작업이 끝날 때 까지 기다려야합니다.
+JS 엔진은 **_Single-Thread 기반_**이기 때문에 수행중인 작업이 끝날 때까지 기다려야합니다.
 
 <u>네트워크 요청과 같은 비동기 함수가 동기적으로 이루어지는 함수로 만들어졌다면, 어떤 일이 일어날까요?</u>
 
-네트워크 요청이 다른 서버로 보내지고, 컴퓨터는 응답 받기를 기다리며 느려질 것입니다.  
+네트워크 요청이 다른 서버로 보내지고, 컴퓨터는 응답 받기를 기다리며 느려질 것입니다.
+
 그 사이에 클릭이나, 다른 요소가 렌더링이 되어져야 하는게 있더라도, 스택은 네트워크 요청 함수에 **_블락킹_** 되어있으므로, 아무 일도 일어나지 않게 됩니다.
 
-즉, 사용자는 해당 작업이 끝날 때까지 아무 일도 못하고 기다려야하는 상황이 벌어집니다.
+즉, <u>사용자는 해당 작업이 끝날 때까지 아무 일도 못하고 기다려야하는 상황</u>이 벌어집니다.
 
-이러한 문제는 **_비동기 콜백_**을 사용함으로써 해결됩니다. 비동기 요청은 자바스크립트 엔진을 구동하는 환경인 **_브라우저_**나 **_Node.js_**에서 처리됩니다.
+이러한 문제는 **_비동기 콜백_**을 사용함으로써 해결됩니다.
+
+비동기 요청은 JS engine을 구동하는 환경인 **_브라우저_**나 **_Node.js_**에서 처리됩니다.
 
 ---
 
@@ -79,12 +90,14 @@ JS 엔진은 Single-Thread 기반이기 때문에 수행중인 작업이 끝날 
   - Heap : 메모리 할당이 일어나는 장소, 참조 타입(객체 등) 데이터가 저장됩니다.
   - Call Stack : 원시 타입(숫자 등) 데이터가 저장됩니다.
 
-- Web Api : 웹 브라우저에 구현된 API입니다. (Ajax 요청, setTimeout(), DOM event 등)
+- Web Api  
+  웹 브라우저에 구현된 API입니다. (Ajax 요청, setTimeout(), DOM event 등)
 
-  > Call Stack에서 실행된 비동기 함수들은 모두 Web API를 호출합니다.
-  > Web API는 콜백 함수를 Callback Queue에 넣습니다.
+  > Call Stack에서 실행된 비동기 함수들은 모두 Web API를 호출합니다.  
+  > 그 다음, Web API는 콜백 함수를 Callback Queue에 넣습니다.
 
-- Event Loop : Call Stack과 Callback Queue들을 감시하며 Call Stack이 비어있다면 Callback Queue에서 Call Stack으로 콜백 함수를 넘겨주는 작업을 합니다.  
+- Event Loop  
+  **_Call Stack_**과 **_Callback Queue_**들을 감시하며 <u>Call Stack이 비어있다면 Callback Queue에서 Call Stack으로 콜백 함수를 넘겨주는 작업</u>을 합니다.  
   (이와 같은 반복적인 행동을 틱(tick)이라고 부릅니다.)
 
   > Event Loop 3가지
@@ -93,7 +106,8 @@ JS 엔진은 Single-Thread 기반이기 때문에 수행중인 작업이 끝날 
   > 2. worker event loop
   > 3. worklet event loop
 
-- Callback Queue : 비동기적으로 실행된 콜백 함수가 보관되는 곳입니다.
+- Callback Queue  
+  비동기적으로 실행된 콜백 함수가 보관되는 곳입니다.  
   (Call Stack이 비어졌을 때 먼저 대기열에 들어온 순서대로 수행됩니다.)
 
   > Callback Queue 3가지
@@ -133,36 +147,39 @@ setTimeout(function () {
 foo2();
 ```
 
-```js
-a;
-b;
-c;
+```console
+<!-- 실행 결과 -->
+a
+b
+c
 ```
 
 실행 과정
 
-1. foo() 함수가 실행 되고 Call stack에 쌓입니다.
-2. foo() 함수 안의 console.log()가 Call stack에 쌓입니다.
+1. **_foo() 함수_**가 실행 되고 **_Call stack_**에 쌓입니다.
+2. **_foo() 함수_** 안의 **_console.log()_**가 **_Call stack_**에 쌓입니다.
 3. a 출력
-4. console.log()가 Call Stack에서 빠지고, foo()함수도 Call Stack에서 빠집니다.
-5. setTimeOut()함수가 Call Stack에 쌓입니다.
-6. 비동기 함수인 setTimeOut()은 Web API가 처리하도록 보냅니다.
-7. Web API가 setTimeOut()함수를 처리해 Callback Queue에 보내는 동안 foo2()함수가 Call Stack에 쌓입니다.
-8. foo2()함수 안의 console.log()가 Call Stack에 쌓입니다.
+4. **_console.log()_**가 **_Call Stack_**에서 빠지고, **_foo()함수_**도 **_Call Stack_**에서 빠집니다.
+5. **_setTimeOut()함수_**가 **_Call Stack_**에 쌓입니다.
+6. 비동기 함수인 **_setTimeOut()_**은 **_Web API_**가 처리하도록 보냅니다.
+7. **_Web API_**가 **_setTimeOut()함수_**를 처리해 **_Callback Queue_**에 보내는 동안 **_foo2()함수_**가 **_Call Stack_**에 쌓입니다.
+8. **_foo2()함수_** 안의 **_console.log()_**가 **_Call Stack_**에 쌓입니다.
 9. b 출력
-10. console.log()가 Call Stack에서 빠지고, foo2()함수도 Call Stack에서 빠집니다.
-11. Call Stack이 비어 있으므로, Callback Queue에 있던 함수를 Call Stack으로 보냅니다.
-12. console.log()가 Call Stack에 쌓입니다.
+10. **_console.log()_**가 **_Call Stack_**에서 빠지고, **_foo2()함수_**도 **_Call Stack_**에서 빠집니다.
+11. **_Call Stack_**이 비어 있으므로, **_Callback Queue_**에 있던 함수를 **_Call Stack_**으로 보냅니다.
+12. **_console.log()_**가 **_Call Stack_**에 쌓입니다.
 13. c 출력
-14. console.log()가 Call Stack에서 빠집니다.
+14. **_console.log()_**가 **_Call Stack_**에서 빠집니다.
 15. 프로그램 종료
 
 ---
 
 ## 결론
 
-Javascript 엔진은 Single-thread 방식으로 동작한다 Call Stack에 함수가 쌓이고 LIFO으로 처리하는 방식입니다.
-비동기 처리를 위해 브라우저의 Web API, Node.js의 libuv 라이브러리과 Callback Queue, Event Loop 등을 이용합니다.
+**_JS engine_**은 **_Single-thread 방식_**으로 동작한다 **_Call Stack에 함수가 쌓이고 LIFO으로 처리하는 방식_**입니다.
+
+비동기 처리를 위해 브라우저의 **_Web API_**, **_Node.js의 libuv 라이브러리_**과 **_Callback Queue_**, **_Event Loop_** 등을 이용합니다.
+
 브라우저와 Node.js는 멀티 스레드로 동작합니다.
 
 > Node.js는 Event Loop가 하나이므로 싱글 스레드라고도 말합니다. (추가 공부 필요)

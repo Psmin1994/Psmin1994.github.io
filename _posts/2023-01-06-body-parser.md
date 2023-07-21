@@ -1,5 +1,5 @@
 ---
-title: Node.js의 body-parser 모듈
+title: body-parser 모듈
 author: Psmin
 data: 2023-01-06 16:23:53 +0900
 categories: [Knowledge, Nodejs]

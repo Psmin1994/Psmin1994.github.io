@@ -1,5 +1,5 @@
 ---
-title: async / await 란?
+title: async / await
 author: Psmin
 data: 2023-02-22 04:11:12 +0900
 categories: [Knowledge, Javascript]
