@@ -18,8 +18,10 @@ tags: [Javascript]
 - 함수가 호출되었을 때 -> `Functional Execution Context`
 - eval()이 사용되었을 때
 
-생성된 Execution Context는 **JS Engine**의 `Call Stack`에 쌓입니다.  
-쌓인 컨텍스트는 **후입선출** 방식(Last In First Out)으로 현재의 컨텍스트가 완료되면 기존의 컨텍스트로 돌아가는 방식입니다.  
+생성된 Execution Context는 **JS Engine**의 `Call Stack`에 쌓입니다.
+
+쌓인 컨텍스트는 **후입선출** 방식(Last In First Out)으로 현재의 컨텍스트가 완료되면 기존의 컨텍스트로 돌아가는 방식입니다.
+
 완료 되기 전 새로운 컨텍스트가 생성된다면 해당 컨텍스트가 **Call Stack**에 쌓이고 해당 컨텍스트를 먼저 완료 후 다시 진행하는 방식입니다.
 
 ![call-stack](/assets/img/js-call-stack.png){: .normal width="450"}

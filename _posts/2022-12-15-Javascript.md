@@ -20,9 +20,15 @@ JS engine은 자바스크립트 코드를 실행하는 프로그램 또는 **_�
 
 인터프리터 방식은 프로그램 전체를 번역 후 실행하는 컴파일러와 달리 프로그램을 1줄씩 번역하는 방식입니다.
 
-컴파일된 실행 파일보다 실행**_속도가 느리고_** 매 실행마다 직접 코드를 구동하기 때문에 **_인터프리터가 있어야한다_**는 단점이 있습니다.
+인터프리터 방식 장점
 
-하지만, 간단하게 실시간으로 수정이 가능하고 디버깅 과정이 가볍다는 장점이 있습니다.
+- 쉽게 실시간으로 수정이 가능하다.
+- 디버깅 과정이 가볍다.
+
+인터프리터 방식 단점
+
+- 컴파일된 실행 파일보다 **_실행속도가 느리다._**
+- 매 실행마다 직접 코드를 구동하기 때문에 **_인터프리터가 있어야한다_**
 
 대표적인 예로는 **_Google의 V8 엔진_**이 있습니다.
 
@@ -63,7 +69,9 @@ JS engine은 자바스크립트 코드를 실행하는 프로그램 또는 **_�
 
 > 그렇다면 우리는 어떻게 Javascript로 비동기 처리를 할 수 있을까요?
 
-## Javscript Runtime
+## Javscript 런타임
+
+자바스크립트 런타임은 프로그래밍 언어가 구동되는 환경을 말합니다.
 
 JS 엔진은 **_Single-Thread 기반_**이기 때문에 수행중인 작업이 끝날 때까지 기다려야합니다.
 
@@ -75,9 +83,9 @@ JS 엔진은 **_Single-Thread 기반_**이기 때문에 수행중인 작업이 �
 
 즉, <u>사용자는 해당 작업이 끝날 때까지 아무 일도 못하고 기다려야하는 상황</u>이 벌어집니다.
 
-이러한 문제는 **_비동기 콜백_**을 사용함으로써 해결됩니다.
+이러한 문제는 JavaScript 런타임에서 제공하는 기능으로 해결합니다.
 
-비동기 요청은 JS engine을 구동하는 환경인 **_브라우저_**나 **_Node.js_**에서 처리됩니다.
+대표적인 JS 런타인인 **_웹 브라우저_**와 **_Node.js_**에 대해 가볍게 알아보겠습니다.
 
 ---
 
@@ -85,18 +93,19 @@ JS 엔진은 **_Single-Thread 기반_**이기 때문에 수행중인 작업이 �
 
 ![js-browser](/assets/img/js-browser-logic.png){: .w-80 .normal}
 
-- JS 엔진
+- **_JS 엔진_**
 
   - Heap : 메모리 할당이 일어나는 장소, 참조 타입(객체 등) 데이터가 저장됩니다.
   - Call Stack : 원시 타입(숫자 등) 데이터가 저장됩니다.
 
-- Web Api  
-  웹 브라우저에 구현된 API입니다. (Ajax 요청, setTimeout(), DOM event 등)
+- **_Web Api_**  
+  웹 브라우저에 구현된 API로 위에서 말한 비동기 등을 처리합니다.  
+  (Ajax 요청, setTimeout(), DOM event 등)
 
   > Call Stack에서 실행된 비동기 함수들은 모두 Web API를 호출합니다.  
   > 그 다음, Web API는 콜백 함수를 Callback Queue에 넣습니다.
 
-- Event Loop  
+- **_Event Loop_**  
   **_Call Stack_**과 **_Callback Queue_**들을 감시하며 <u>Call Stack이 비어있다면 Callback Queue에서 Call Stack으로 콜백 함수를 넘겨주는 작업</u>을 합니다.  
   (이와 같은 반복적인 행동을 틱(tick)이라고 부릅니다.)
 
@@ -124,8 +133,8 @@ JS 엔진은 **_Single-Thread 기반_**이기 때문에 수행중인 작업이 �
 
 ![js-nodejs](/assets//img/js-nodejs-logic.png){: .w-100 .normal}
 
-Node.js 는 비동기 IO를 지원하기 위해 <kbd>libuv</kbd> 라이브러리를 사용한다.  
-libuv는 Event Loop를 제공한다.
+Node.js 는 비동기 IO를 지원하기 위해 <kbd>libuv</kbd> 라이브러리를 사용합니다.  
+**_libuv_**는 Event Loop를 제공합니다.
 
 ---
 
@@ -176,9 +185,9 @@ c
 
 ## 결론
 
-**_JS engine_**은 **_Single-thread 방식_**으로 동작한다 **_Call Stack에 함수가 쌓이고 LIFO으로 처리하는 방식_**입니다.
+**_JS engine_**은 **_Single-thread 방식_**으로 **_Call Stack에 함수가 쌓이고 LIFO으로 처리하는 방식_**입니다.
 
-비동기 처리를 위해 브라우저의 **_Web API_**, **_Node.js의 libuv 라이브러리_**과 **_Callback Queue_**, **_Event Loop_** 등을 이용합니다.
+비동기 처리를 위해서 브라우저의 **_Web API_**, **_Node.js의 libuv 라이브러리_**와 같은 런타임에서 제공하는 기능을 이용합니다.
 
 브라우저와 Node.js는 멀티 스레드로 동작합니다.
 
