@@ -85,7 +85,7 @@ JS 엔진은 **_Single-Thread 기반_**이기 때문에 수행중인 작업이 �
 
 이러한 문제는 JavaScript 런타임에서 제공하는 기능으로 해결합니다.
 
-대표적인 JS 런타인인 **_웹 브라우저_**와 **_Node.js_**에 대해 가볍게 알아보겠습니다.
+대표적인 JS 런타임인 **_웹 브라우저_**와 **_Node.js_**에 대해 가볍게 알아보겠습니다.
 
 ---
 
@@ -115,7 +115,7 @@ JS 엔진은 **_Single-Thread 기반_**이기 때문에 수행중인 작업이 �
   > 2. worker event loop
   > 3. worklet event loop
 
-- Callback Queue  
+- **_Callback Queue_**  
   비동기적으로 실행된 콜백 함수가 보관되는 곳입니다.  
   (Call Stack이 비어졌을 때 먼저 대기열에 들어온 순서대로 수행됩니다.)
 
@@ -187,7 +187,7 @@ c
 
 **_JS engine_**은 **_Single-thread 방식_**으로 **_Call Stack에 함수가 쌓이고 LIFO으로 처리하는 방식_**입니다.
 
-비동기 처리를 위해서 브라우저의 **_Web API_**, **_Node.js의 libuv 라이브러리_**와 같은 런타임에서 제공하는 기능을 이용합니다.
+비동기 처리를 위해서 브라우저의 **_Web API_**, Node.js의 **_libuv 라이브러리_**와 같은 런타임에서 제공하는 기능을 이용합니다.
 
 브라우저와 Node.js는 멀티 스레드로 동작합니다.
 
