@@ -94,7 +94,7 @@ Web Server는 정적 컨텐츠를 처리하고 WAS는 동적 컨텐츠를 처리
 
 - **_결론_**
 
-  ![Web-Server](/assets/img/web-server-was.jpg){: .w-80 .normal}
+  ![Web-Server](/assets/img/web-server-was.png){: .w-80 .normal}
 
   Web Server를 WAS 앞에 두고 처리해 WAS를 Web Server가 필요에 따라 요청할 수 있는 플러그인 형태로 설정하면 효율적인 분산 처리가 가능할 것입니다.
 
