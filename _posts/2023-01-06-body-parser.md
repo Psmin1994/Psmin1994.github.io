@@ -12,11 +12,11 @@ tags: [Body-Parser]
 
 ## body-parser
 
-HTTP 의 **_post_**, **_put_** 요청시 HTTP 의 본문(body)를 parsing 하여 나온 결과값을 req.body 에 넣어 body 프로퍼티를 사용할 수 있도록 합니다.
+HTTP 의 **_post_**, **_put_** 요청시 HTTP 의 본문(body)를 parsing 하여 나온 결과값을 `req.body` 에 넣어 body 프로퍼티를 사용할 수 있도록 합니다.
 
-아래의 테스트 코드에서 req.body를 콘솔로그로 출력해보면 undefined가 출력합니다.
+아래의 테스트 코드에서 `req.body`를 콘솔로그로 출력해보면 **_undefined_**가 출력합니다.
 
-즉, Node.js의 웹프레임워크인 Express는 요청을 처리할 때 기본적으로 body를 undefined로 처리하고 있습니다.
+즉, express는 요청을 처리할 때 **_기본적으로 body를 undefined로 처리_**하고 있습니다.
 
 ```js
 app.get("/test", (req, res) => {
@@ -25,7 +25,7 @@ app.get("/test", (req, res) => {
 });
 ```
 
-body-parser 모듈로 미들웨어 함수를 등록하면, request의 body부분을 자신이 원하는 형태로 파싱하여 활용할 수 있습니다.
+body-parser 모듈로 미들웨어 함수를 등록하면, <u>req의 body부분을 자신이 원하는 형태로 파싱하여 활용</u>할 수 있습니다.
 
 ---
 
@@ -42,7 +42,7 @@ body-parser 모듈로 미들웨어 함수를 등록하면, request의 body부분
 
 ### JSON body parser
 
-HTTP 의 본문(body)를 **_JSON_** 으로 파싱합니다.
+HTTP 의 본문(body)를 **_JSON_** 으로 파싱합니다.  
 HTTP 의 헤더(header) **_Content-Type_** 속성 값이 **_“application/json”_** 이 아닐 경우에는 파싱하지 않습니다.
 
 - 옵션
@@ -106,10 +106,6 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 ```
 
-{: prompt-info}
-
-> 서버 코드에 적용해볼까요?
-
 ---
 
 ## 예제 코드
@@ -117,12 +113,8 @@ app.use(express.urlencoded({ extended: false }));
 ```js
 import express from "express";
 import bodyParser from "body-parser";
-import path from "path";
 
 const app = express();
-const __dirname = path.resolve();
-
-app.use("/", express.static(`${__dirname}/src/public`));
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
