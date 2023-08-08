@@ -1,5 +1,5 @@
 ---
-title: Web Server와 Was
+title: Web Server, Was, Reverse Proxy
 author: Psmin
 data: 2022-12-23 02:39:23 +0900
 categories: [Knowledge, CS]
@@ -68,7 +68,7 @@ WAS는 Web Server의 기능들을 구조적으로 분리하여 처리하기위�
 
 ---
 
-## Web Server VS WAS
+## Web Server vs WAS
 
 Web Server는 정적 컨텐츠를 처리하고 WAS는 동적 컨텐츠를 처리합니다.
 
@@ -92,13 +92,15 @@ Web Server는 정적 컨텐츠를 처리하고 WAS는 동적 컨텐츠를 처리
   - <kbd>배포 및 유지보수의 편의성</kbd>
     (예시 : Apache + Tomcat)
 
+  <br/>
+
 - **_결론_**
 
   ![Web-Server](/assets/img/web-server-was.png){: .w-80 .normal}
 
   Web Server를 WAS 앞에 두고 처리해 WAS를 Web Server가 필요에 따라 요청할 수 있는 플러그인 형태로 설정하면 효율적인 분산 처리가 가능할 것입니다.
 
-  추후에 Nodejs 서버 앞에 NginX로 리버스 프록시 서버를 배치하는 형태로 프로젝트를 구현해보겠습니다.
+  추후에 Web Server와 WAS 기능을 같이 수행하는 Nodejs 서버 앞에 NginX로 리버스 프록시 서버를 배치하는 형태로 프로젝트를 구현해보겠습니다.
 
 ---
 
