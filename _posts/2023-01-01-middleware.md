@@ -8,9 +8,9 @@ tags: [Express, Middleware]
 
 ## 미들웨어 Middleware
 
-미들웨어는 Express 동작의 핵심으로 HTTP 요청과 응답 사이에서 단계별 동작을 수행합니다.
+미들웨어는 express 동작의 핵심으로 HTTP 요청과 응답 사이에서 단계별 동작을 수행합니다.
 
-docs를 보면 middleware에 대한 설명이 나와있습니다.
+**_docs_**를 보면 middleware에 대한 설명이 나와있습니다.
 
 > "Middleware functions are functions that have access to the request object (req), the response object (res), and the next function in the application’s request-response cycle."
 
