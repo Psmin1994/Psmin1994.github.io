@@ -1,9 +1,9 @@
 ---
-title: HTTP
+title: 상태 코드 (Status Code)
 author: Psmin
-data: 2023-02-03 11:15:27 +0900
+data: 2023-02-03 18:26:31 +0900
 categories: [Knowledge, CS]
-tags: [HTTP]
+tags: [Status Code]
 ---
 
 ## Statue Code
