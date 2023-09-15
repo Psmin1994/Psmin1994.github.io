@@ -1,7 +1,7 @@
 ---
 title: jsonwebtoken 모듈
 author: Psmin
-data: 2023-03-02 21:23:16 +0900
+data: 2023-02-20 21:23:16 +0900
 categories: [Knowledge, Nodejs]
 tags: [jsonwebtoken]
 ---
@@ -40,6 +40,10 @@ tags: [jsonwebtoken]
   - `options`  
     : 추가 옵션으로 객체로 입력합니다. 주로, 사용할 암호화 알고리즘이나 만료시간 등을 설정합니다.
 
+    - **expiresIn** : 만료 시각
+    - **issuer** : 토큰 발급자
+    - **subject** : 토큰 제목
+
   - `callback`  
     : 콜백 추가시 비동기적으로 수행되며 에러와 토큰을 반환, 생략 시 토큰만 반환됩니다.
 
@@ -62,6 +66,12 @@ tags: [jsonwebtoken]
   - `options`  
     : 추가 옵션으로 객체 형태로 입력합니다.
 
+    - **iat** : 토큰이 발급된 시간 (issued at)
+    - **exp** : 만료 시각 (expiraton)
+    - **iss** : 토큰 발급자 (issuer)
+    - **sub** : 토큰 제목 (subject)
+    - **aud** : 토큰 대상자 (audience)
+
   - `callback`  
     : 콜백 추가시 비동기적으로 수행되며 에러와 결과를 반환합니다.
 
@@ -82,9 +92,10 @@ tags: [jsonwebtoken]
      },
      "secretkey",
      {
+       // algorithm,
        subject: "test jwttoken",
-       expiresIn: "60s",
-       issuer: "psmin",
+       expiresIn: "60s", // 만료 시간 지정
+       issuer: "psmin", //
      }
    );
 
