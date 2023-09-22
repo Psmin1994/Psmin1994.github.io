@@ -8,15 +8,15 @@ tags: [Express, Middleware]
 
 ## 미들웨어 Middleware
 
-미들웨어는 express 동작의 핵심으로 HTTP 요청과 응답 사이에서 단계별 동작을 수행합니다.
+미들웨어는 Express 동작의 핵심으로 HTTP 요청과 응답 사이에서 단계별 동작을 수행합니다.
 
-**_docs_**를 보면 middleware에 대한 설명이 나와있습니다.
+**docs**를 보면 middleware에 대한 설명이 나와있습니다.
 
 > "Middleware functions are functions that have access to the request object (req), the response object (res), and the next function in the application’s request-response cycle."
 
 번역하면 **_"미들웨어 함수는 req(요청) 객체, res(응답) 객체, 그리고 어플리케이션 요청-응답 사이클 도중 그 다음의 미들웨어 함수에 대한 엑세스 권한을 갖는 함수이다."_** 입니다.
 
-간단하게 말하면 클라이언트에게 요청이 오면 그 요청관 응답 중간에서 목적에 맞게 처리를 하는, 말하자면 거쳐가는 함수들이라고 볼 수 있습니다.
+간단하게 말하면 클라이언트에게 요청이 오면 그 요청과 응답 중간에서 목적에 맞게 처리를 하는, 말하자면 거쳐가는 함수들이라고 볼 수 있습니다.
 
 ![Middleware](/assets/img/middleware.jpg){: .w-80 .normal}
 
@@ -40,7 +40,7 @@ app.get('/', (req, res) => {
 
 ### 미들웨어 작성 예제
 
-express 에서 미들웨어를 작성 기본 예제를 살펴보겠습니다.
+Express 에서 미들웨어를 작성 기본 예제를 살펴보겠습니다.
 
 ```js
 var express = require("express");
@@ -73,7 +73,7 @@ app.listen(3000);
 
 미들웨어는 적용되는 위치에 따라서 분류합니다.
 
-애플리케이션 미들웨어는 **_모든 요청에 공통적으로 적용_**하기위한 방법입니다.
+애플리케이션 미들웨어는 **모든 요청에 공통적으로 적용**하기위한 방법입니다.
 
 http 요청이 들어온 순간부터 적용된 순서대로 동작합니다.
 
