@@ -1,7 +1,7 @@
 ---
 title: 동기, 비동기 처리
 author: Psmin
-data: 2023-02-14 20:59:22 +0900
+data: 2023-03-09 20:59:22 +0900
 categories: [Knowledge, Javascript]
 tags: [Javascript, Asynchronous]
 ---

@@ -1,7 +1,7 @@
 ---
 title: async / await
 author: Psmin
-data: 2023-02-22 04:11:12 +0900
+data: 2023-03-14 04:11:12 +0900
 categories: [Knowledge, Javascript]
 tags: [Javascript, Async/Await]
 ---
