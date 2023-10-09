@@ -1,14 +1,14 @@
 ---
 title: Composition
 author: Psmin
-data: 2023-03-15 21:35:05 +0900
+data: 2023-04-02 21:35:05 +0900
 categories: [Knowledge, ReactJS]
 tags: [React, Composition]
 ---
 
 ## Composition 합성
 
-React에서 컴포넌트를 구성하는 방법으로 여러 개의 컴포넌트를 합쳐서 새로운 컴포넌트를 만드는 것을 말합니다.
+React에서 컴포넌트를 구성하는 방법으로 **여러 개의 컴포넌트를 합쳐서 새로운 컴포넌트를 만드는 것**을 말합니다.
 
 그렇다면 여러 개의 컴포넌트들을 어떻게 조합할까요?
 
@@ -40,7 +40,7 @@ function FancyBorder(props) {
 React.createElement(type, [props], [...children]);
 ```
 
-`FancyBorder` 컴포넌트를 실제로 사용해보겠습니다.
+**FancyBorder** 컴포넌트를 실제로 사용해보겠습니다.
 
 ```js
 function WelcomeDialog() {
@@ -53,7 +53,7 @@ function WelcomeDialog() {
 }
 ```
 
-FancyBorder 컴포넌트 안에 있는 모든 JSX 태그(h1, p)는 children으로 전달됩니다.
+FancyBorder **컴포넌트 안에 있는 모든 JSX 태그(h1, p)는 children으로 전달**됩니다.
 
 > 만약 여러 개의 children 집합이 필요한 경우는 어떻게 할까요?
 
@@ -76,7 +76,7 @@ function App() {
 }
 ```
 
-`<Contacts />`와 `<Chat />`같은 React 엘리먼트는 단지 객체이기 때문에 다른 데이터처럼 prop으로 전달할 수 있습니다.
+**<Contacts />**와 **<Chat />**같은 React 엘리먼트는 단지 객체이기 때문에 다른 데이터처럼 **prop으로 전달**할 수 있습니다.
 
 ---
 
@@ -88,7 +88,7 @@ function App() {
 
 React에서는 이 역시 합성을 통해 해결할 수 있습니다.
 
-더 “구체적인” 컴포넌트가 “일반적인” 컴포넌트를 렌더링하고 props를 통해 내용을 구성합니다.
+더 **“구체적인”** 컴포넌트가 **“일반적인”** 컴포넌트를 렌더링하고 **props를 통해 내용을 구성**합니다.
 
 ```js
 function Dialog(props) {
@@ -109,7 +109,7 @@ function WelcomeDialog() {
 
 위 코드는 더 구체적인 컴포넌트인 WelcomeDialog에서 Dialog에게 title, message props로 화면에 출력 될 값을 넣어주고, Dialog에서는 WelcomeDialog로부터 받은 props로 화면을 구성합니다.
 
-즉, Specialization `범용적인 개념을 구별 되게 구체화 하는 것`을 말합니다.
+즉, Specialization이란 **범용적인 개념을 구별 되게 구체화 하는 것**을 말합니다.
 
 ---
 
@@ -169,4 +169,4 @@ props와 합성은 명시적이고 안전한 방법으로 컴포넌트의 모양
 
 ## 결론
 
-React는 복잡한 컴포넌트를 쪼개서 여러 개의 컴포넌트로 만든 후 컴포넌트들을 조합해서 새로운 컴포넌트를 만드는 것이 바람직합니다.
+React는 복잡한 컴포넌트를 쪼개서 **여러 개의 컴포넌트로 만든 후 컴포넌트들을 조합해서 새로운 컴포넌트를 만드는 것**이 바람직합니다.
