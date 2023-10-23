@@ -10,7 +10,8 @@ tags: [React, useLocation]
 
 > The useLocation hook returns the location object that represents the current URL. You can think about it like a useState that returns a new location whenever the URL changes.
 
-useLocation 훅은 **_현재의 URL을 대표하는 location 객체를 반환_**합니다.
+useLocation 훅은 **현재의 URL을 대표하는 location 객체를 반환**합니다.
+
 URL이 바뀔 때마다 새로운 location이 반환되는 useState 처럼 생각할 수 있습니다.
 
 useLocation이 반환하는 Location 객체를 확인해보겠습니다.
@@ -50,6 +51,7 @@ export default function BasicExample() {
     </Router>
   );
 }
+
 function Home() {
   return (
     <>
@@ -57,6 +59,7 @@ function Home() {
     </>
   );
 }
+
 function About() {
   let locationObj = useLocation();
 
@@ -74,14 +77,14 @@ About링크를 누르면 locationObj에 location객체가 저장되고 locationO
 
 ![location-obj](/assets/img/location-obj.png){: .w-80}
 
-- **_pathname_** : path경로 문자열
-- **_search_** : ?부터 나오는 문자열 전부
-- **_hash_** : #부터 나오는 문자열 전부
-- **_key_** : 랜덤의 6글자 문자열
+- **pathname** : path경로 문자열
+- **search** : ?부터 나오는 문자열 전부
+- **hash** : #부터 나오는 문자열 전부
+- **key** : 랜덤의 6글자 문자열
 
   > history stack에서 이 해당하는 location 객체를 찾기위한 고유의 문자열 키입니다.
 
-- **_state_** : URL에 붙여서 보내는 정보가 아닌 숨겨서 또는 코드로 보내는 정보
+- **state** : URL에 붙여서 보내는 정보가 아닌 숨겨서 또는 코드로 보내는 정보
 
   > URL처럼 공개적으로 보여지면 안되거나 URL 글자 수 제한에 영향을 주는 경우 state로 보냅니다.
 
@@ -89,47 +92,46 @@ About링크를 누르면 locationObj에 location객체가 저장되고 locationO
 
 ## useNavigate()와 useLocation()으로 데이터 주고받기
 
-useNavigate Hook을 사용할 때 2번째 인자로 location 객체의 state로 데이터를 보낼 수 있습니다.
+**useNavigate Hook**을 사용할 때 **2번째 인자로 location 객체의 state로 데이터**를 보낼 수 있습니다.
 
-1. 두번쨰 인자의state 속성으로 데이터를 담아서 보냅니다.
+- **두번쨰 인자의 state 속성**으로 데이터를 담아서 보냅니다.
 
-   ```js
-   import { useNavigate } from "react-router-dom";
+  ```js
+  import { useNavigate } from "react-router-dom";
 
-   // ...생략
+  // ...생략
 
-   const navigate = useNavigate();
+  const navigate = useNavigate();
 
-   // ...생략
+  // ...생략
 
-   const gotoMain = () => {
-     navigate("/main", {
-       state: {
-         userId: user.uid,
-       },
-     });
-   };
-   ```
+  const gotoMain = () => {
+    navigate("/main", {
+      state: {
+        userId: user.uid,
+      },
+    });
+  };
+  ```
 
-2. location 객체의 state에 내가 보낸 데이터들이 담겨있습니다.
+- location 객체의 state에 내가 보낸 데이터들이 담겨있습니다.
 
-   ```js
-   import { useLocation } from "react-router-dom";
+  ```js
+  import { useLocation } from "react-router-dom";
 
-   // ...생략
+  // ...생략
 
-   const location = useLocation();
+  const location = useLocation();
 
-   // ...생략
+  // ...생략
 
-   const [userId, setUserId] = useState(location.state?.userId);
-   ```
+  const [userId, setUserId] = useState(location.state.userId);
+  ```
 
-- **_Link_**
-  Link를 통해서도 데이터를 보낼 수 있습니다.
+- Link를 통해서도 데이터를 보낼 수 있습니다.
 
-```js
-<Link to={`/main`} state={{ test: "hello world" }}>
-  test
-</Link>
-```
+  ```js
+  <Link to={`/main`} state={{ test: "hello world" }}>
+    test
+  </Link>
+  ```

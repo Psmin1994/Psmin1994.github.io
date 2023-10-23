@@ -1,5 +1,5 @@
 ---
-title: Material Ui (MUI)
+title: Material UI (MUI)
 author: Psmin
 data: 2023-04-12 22:31:17 +0900
 categories: [Knowledge, ReactJS]
