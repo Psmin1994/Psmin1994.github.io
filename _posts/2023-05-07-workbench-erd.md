@@ -1,7 +1,7 @@
 ---
 title: Mysql Workbench로 ER 다이어그램 만들기
 author: Psmin
-data: 2023-05-02 19:01:23 +0900
+data: 2023-05-07 19:01:23 +0900
 categories: [Knowledge, CS]
 tags: [Workbench, ERD]
 ---
