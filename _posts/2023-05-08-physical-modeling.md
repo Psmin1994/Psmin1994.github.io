@@ -27,4 +27,4 @@ MySQL Workbench에서는 ER 다이어그램을 DB 물리 스키마로 생성하�
    ![add-diagram](/assets/img/add-diagram.png)
    {: .w-80}
 
-3.
+3. EER 그리기
