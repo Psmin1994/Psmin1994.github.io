@@ -198,8 +198,9 @@ tags: [Workbench, ERD]
 
 ### 물리적 데이터 모델링
 
-먼저 위에서 작성한 테이블 명세서를 정해진 [DB 명명 규칙](https://psmin1994.github.io/posts/db-naming/)
-에 따라 변환합니다.
+먼저 위에서 작성한 테이블 명세서를 정해진 DB 명명 규칙에 따라 변환합니다.
+
+> 참고 글 : [DB 명명 규칙](https://psmin1994.github.io/posts/db-naming/)
 
 ![table-specs](/assets/img/table-specs.png){: .w-80}
 
@@ -209,4 +210,6 @@ tags: [Workbench, ERD]
 
    ![workbench-erd-ex-01](/assets/img/workbench-erd-ex-01.png){: .w-80}
 
-2.
+2. Workbench의 **Forward Engineer**를 활용해 테이블을 생성합니다.
+
+   > 참고 글 : [DB 명명 규칙](https://psmin1994.github.io/posts/db-naming/)
