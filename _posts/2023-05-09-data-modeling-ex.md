@@ -366,7 +366,7 @@ Workbench의 **Forward Engineer**를 활용해 테이블을 생성합니다.
 
 > 참고 글 : [DB 명명 규칙](https://psmin1994.github.io/posts/db-naming/)
 
-![ex-02-table-specs-02](/assets/img/ex-02-table-specs-02.png){: .w-80}
+![ex-02-table-specs-02](/assets/img/ex-01-table-specs-02.png){: .w-80}
 
 이제 MySQL Workbench의 **Forward Engineer**를 이용해 DB 물리 스키마를 생성해보겠습니다.
 
