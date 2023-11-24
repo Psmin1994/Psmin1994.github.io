@@ -42,7 +42,7 @@ tags: [Workbench, ERD]
 
    얻어낸 정보를 표로 정리해주겠습니다.
 
-   ![개체와 속성](/assets/img/conceptual-ex-01.png){: .w-80}
+   ![ex-01-entity](/assets/img/ex-01-entity.png){: .w-80}
 
 2. **관계를 추출**합니다.
 
@@ -59,7 +59,7 @@ tags: [Workbench, ERD]
 
      > 강의시간, 강의요일을 기본키로 강의 정보 개체를 만듭니다.
 
-   ![관계](/assets/img/logical-ex-01.png){: .w-80}
+   ![ex-01-relation](/assets/img/ex-01-relation.png){: .w-80}
 
 3. 작성된 데이터를 바탕으로 **ER 다이어그램을 작성**합니다.
 
@@ -68,7 +68,7 @@ tags: [Workbench, ERD]
    > 과목 개체의 강의시간, 강의장소 속성을 강의 정보라는 개체로 따로 꺼내 주었습니다.  
    > 과목과 강의 정보의 관계는 한 과목에 여러 강의 장소와 시간이 설정될 수 있으므로 1 : N 관계로 설정하겠습니다.
 
-   ![erd-ex-01](/assets/img/erd-ex-01.png){: .w-80}
+   ![ex-01-erd](/assets/img/ex-01-erd.png){: .w-80}
 
 ---
 
@@ -86,7 +86,7 @@ tags: [Workbench, ERD]
 
    - 개체가 가지고 있는 키 속성을 릴레이션의 기본 키로 변환합니다.
 
-   ![relation-schema-ex-01](/assets/img/relation-schema-ex-01.png){: .w-80}
+   ![ex-01-relation-schema-01](/assets/img/ex-01-relation-schema-01.png){: .w-80}
 
 2. **N : M 관계는 릴레이션을 변환**
 
@@ -97,7 +97,7 @@ tags: [Workbench, ERD]
    - 관계를 맺고 있는 릴레이션들의 기본 키를 외래키로 가져와 기본 키로 사용합니다.
      (필요 시 별도의 기본 키 지정 가능)
 
-   ![relation-schema-ex-02](/assets/img/relation-schema-ex-02.png){: .w-80}
+   ![ex-01-relation-schema-02](/assets/img/ex-01-relation-schema-02.png){: .w-80}
 
 3. **1 : N 관계는 외래 키로 표현**
 
@@ -110,7 +110,7 @@ tags: [Workbench, ERD]
    > 약한 걔체란?
    > 다른 개체의 존재여부에 의존하는 개체
 
-   ![relation-schema-ex-03](/assets/img/relation-schema-ex-03.png){: .w-80}
+   ![ex-01-relation-schema-03](/assets/img/ex-01-relation-schema-03.png){: .w-80}
 
 4. **1 : 1 관계는 외래 키로 표현**
 
@@ -134,7 +134,7 @@ tags: [Workbench, ERD]
 
 속성의 **데이터 타입**, **길이**, **Null 값 허용 여부**, **기본 값**, **제약 조건** 등을 세부적으로 결정합니다.
 
-![relation-schema-ex-04](/assets/img/relation-schema-ex-04.png){: .w-80}
+![ex-01-table-specs-01](/assets/img/ex-01-table-specs-01.png){: .w-80}
 
 ---
 
@@ -202,14 +202,180 @@ tags: [Workbench, ERD]
 
 > 참고 글 : [DB 명명 규칙](https://psmin1994.github.io/posts/db-naming/)
 
-![table-specs](/assets/img/table-specs.png){: .w-80}
+![ex-01-table-specs-02](/assets/img/ex-01-table-specs-02.png){: .w-80}
 
 이제 MySQL Workbench의 **Forward Engineer**를 이용해 DB 물리 스키마를 생성해보겠습니다.
 
-1. 먼저 Workbench에 테이블 명세서를 바탕으로 ER 다이어그램을 작성합니다.
+먼저 Workbench에 테이블 명세서를 바탕으로 ER 다이어그램을 작성합니다.
 
-   ![workbench-erd-ex-01](/assets/img/workbench-erd-ex-01.png){: .w-80}
+![ex-01-workbench-erd](/assets/img/ex-01-workbench-erd.png){: .w-80}
 
-2. Workbench의 **Forward Engineer**를 활용해 테이블을 생성합니다.
+Workbench의 **Forward Engineer**를 활용해 테이블을 생성합니다.
 
-   > 참고 글 : [DB 명명 규칙](https://psmin1994.github.io/posts/db-naming/)
+> 참고 글 : [물리적 데이터 모델링](https://psmin1994.github.io/posts/physical-modeling/)
+
+---
+
+## 예제 2 - 자재 구매의뢰업무
+
+---
+
+### 요구 사항 명세서
+
+1. 각 부서에서 구매의뢰를 요청한다.
+
+2. 한 번의 구매의뢰로 여러 개의 자재를 구매 의뢰할 수 있다.
+
+3. 자재는 자재코드로 관리된다.
+
+4. 구매의뢰 내역에 따라 구매발주가 이루어진다.
+
+5. 한 구매의뢰는 여러 번 구매 발주될 수 있다.
+
+6. 한 구매 발주는 한 구매의뢰번호와 관련된다.
+
+7. 한 장의 구매발주서는 한 거래처에 발행된다.
+
+8. 한 구매발주서에는 여러 자재를 발주할 수 있다
+
+9. 구매의뢰서에는 구매의뢰번호, 구매부서, 구매의뢰일자, 자재명, 요구수량 등을 관리한다
+
+10. 구매 발주서에는 거래처, 구매 발주일자, 자재명, 발주수량, 단가, 납기일자 등을 관리한다.
+
+11. 거래처는 거래처이름, 대표자, 연락전화번호, 사업자 등록번호, 주소 등을 관리한다
+
+12. 부서는 부서명, 대표전화번호 등을 관리한다.
+
+---
+
+### 개념적 데이터 모델링
+
+- **개체와 속성을 추출**
+
+  - **요구사항 명세서에서 명사들을 추출**합니다.
+
+    1.  부서, 구매의뢰
+    2.  구매의뢰, 자재, 구매 의뢰
+    3.  자재, 자재코드
+    4.  구매의뢰, 구매발주
+    5.  구매의뢰, 구매발주
+    6.  구매발주, 구매의뢰번호
+    7.  구매발주서, 거래처
+    8.  구매발주서, 자재
+    9.  구매의뢰서, 구매의뢰번호, 구매부서, 구매의뢰일자, 자재명, 요구수량
+    10. 구매발주서, 거래처, 구매 발주일자, 자재명, 발주수량, 단가, 납기일자
+    11. 거래처, 거래처이름, 대표자, 연락전화번호, 사업자 등록번호, 주소
+    12. 부서, 부서명, 대표전화번호
+
+  - 다음은 **추출한 명사들을 대체하거나 삭제**합니다.
+
+    1.  부서, 구매의뢰
+    2.  구매의뢰, 자재
+    3.  자재, 자재코드
+    4.  구매의뢰, 구매발주
+    5.  구매의뢰, 구매발주
+    6.  구매발주, 의뢰번호
+    7.  구매발주, 거래처
+    8.  구매발주, 자재
+    9.  구매의뢰, 의뢰번호, 구매부서, 의뢰일자, 자재명, 요구수량
+    10. 구매발주, 거래처이름, 발주일자, 자재명, 발주수량, 단가, 납기일자
+    11. 거래처, 거래처이름, 대표자, 연락전화번호, 사업자 등록번호, 주소
+    12. 부서, 부서명, 대표전화번호
+
+  - **개체로 사용할 명사들을 선정**합니다.
+
+    **부서**, **구매의뢰**, **자재**, **구매발주**, **거래처**
+
+  - 얻어낸 정보를 표로 정리해주겠습니다.
+
+  ![ex-02-entity](/assets/img/ex-02-entity.png){: .w-80}
+
+- **관계를 추출**합니다.
+
+  일반적으로 요구 사항 명세서의 **동사**를 추출합니다.
+
+  <u>개체 간의 연관성을 표현한 동사를 선택</u>합니다.
+
+  - 요구사항 1번을 보면 부서에서 구매의뢰를 합니다.
+
+    부서에서 구매 의뢰를 등록하며 **1 : N** 관계임을 알 수 있습니다.
+
+  - 요구사항 2번에서 의뢰목록과 자재의 관계는 **N : M**관계임을 알 수 있습니다.
+
+    > M : N 관계는 중간 엔티티를 두어 표현합니다.  
+    > 요구수량을 속성으로 구매정보 엔티티를 생성합니다.
+
+  - 요구사항 5번에서 구매의뢰과 구매발주은 **1 : N** 관계임을 알 수 있습니다.
+
+  - 요구사항 6번에서 구매발주과 거래처는 **N : 1** 관계임을 알 수 있습니다.
+
+  - 요구사항 7번에서 구매발주과 자재은 **N : M** 관계임을 알 수 있습니다.
+
+    > M : N 관계는 중간 엔티티를 두어 표현합니다.  
+    > 발주수량을 속성으로 발주정보 엔티티를 생성합니다.
+
+  ![ex-02-relation](/assets/img/ex-02-relation.png){: .w-80}
+
+- 작성된 데이터를 바탕으로 **ER 다이어그램을 작성**합니다.
+
+  ![Draw-ERD](/assets/img/ex-02-erd.png){: .w-80}
+
+---
+
+### 논리적 데이터 모델링
+
+5가지 과정을 순서대로 적용하여 ER 다이어그램을 **릴레이션 스키마로 변환**해보겠습니다.
+
+1. **모든 개체를 릴레이션으로 변환**
+
+   E-R 다이어그램의 각 개체를 하나의 릴레이션으로 변환합니다.
+
+   ![ex-02-relation-schema-01](/assets/img/ex-02-relation-schema-01.png){: .w-80}
+
+2. **N : M 관계는 릴레이션을 변환**
+
+   개념적 데이터 모델링 단계에서 생햑했다면 <u>N : M 관계는 중간 릴레이션을 생성해서 관계를 표현</u>합니다.
+
+   > 구매정보, 발주정보 개체를 말합니다.
+
+   ![ex-02-relation-schema-02](/assets/img/ex-02-relation-schema-02.png){: .w-80}
+
+3. **1 : N 관계는 외래 키로 표현**
+
+   <u>1 : N 관계는 릴레이션으로 변환하지 않고 외래 키로만 표현</u>합니다.
+
+   ![ex-02-relation-schema-03](/assets/img/ex-02-relation-schema-03.png){: .w-80}
+
+4. **1 : 1 관계는 외래 키로 표현**
+
+5. **다중 값 속성은 릴레이션으로 변환**
+
+---
+
+이제 작성한 릴레이션 스키마를 **테이블 명세서로 변환**합니다.
+
+속성의 **데이터 타입**, **길이**, **Null 값 허용 여부**, **기본 값**, **제약 조건** 등을 세부적으로 결정합니다.
+
+![ex-02-table-specs-01](/assets/img/ex-02-table-specs-01.png){: .w-80}
+
+---
+
+### 물리적 데이터 모델링
+
+먼저 위에서 작성한 테이블 명세서를 정해진 DB 명명 규칙에 따라 변환합니다.
+
+> 참고 글 : [DB 명명 규칙](https://psmin1994.github.io/posts/db-naming/)
+
+![ex-02-table-specs-02](/assets/img/ex-02-table-specs-02.png){: .w-80}
+
+이제 MySQL Workbench의 **Forward Engineer**를 이용해 DB 물리 스키마를 생성해보겠습니다.
+
+먼저 Workbench에 테이블 명세서를 바탕으로 ER 다이어그램을 작성합니다.
+
+![ex-02-workbench-erd](/assets/img/ex-01-workbench-erd.png){: .w-80}
+
+Workbench의 **Forward Engineer**를 활용해 테이블을 생성합니다.
+
+> 참고 글 : [물리적 데이터 모델링](https://psmin1994.github.io/posts/physical-modeling/)
+
+---
