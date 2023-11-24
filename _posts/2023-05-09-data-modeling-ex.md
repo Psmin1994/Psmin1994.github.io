@@ -366,13 +366,11 @@ Workbench의 **Forward Engineer**를 활용해 테이블을 생성합니다.
 
 > 참고 글 : [DB 명명 규칙](https://psmin1994.github.io/posts/db-naming/)
 
-![ex-02-table-specs-02](/assets/img/ex-01-table-specs-02.png){: .w-80}
+![ex-02-table-specs-02](/assets/img/ex-02-table-specs-02.png){: .w-80}
 
-이제 MySQL Workbench의 **Forward Engineer**를 이용해 DB 물리 스키마를 생성해보겠습니다.
+이제 Workbench에 테이블 명세서를 바탕으로 ER 다이어그램을 작성합니다.
 
-먼저 Workbench에 테이블 명세서를 바탕으로 ER 다이어그램을 작성합니다.
-
-![ex-02-workbench-erd](/assets/img/ex-01-workbench-erd.png){: .w-80}
+![ex-02-workbench-erd](/assets/img/ex-02-workbench-erd.png){: .w-80}
 
 Workbench의 **Forward Engineer**를 활용해 테이블을 생성합니다.
 
