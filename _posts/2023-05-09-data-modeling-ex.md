@@ -198,12 +198,15 @@ tags: [Workbench, ERD]
 
 ### 물리적 데이터 모델링
 
-먼저 테이블 명세서를 DB 명명 규칙에 따라 변환합니다.
+먼저 위에서 작성한 테이블 명세서를 정해진 [DB 명명 규칙](https://psmin1994.github.io/posts/db-naming/)
+에 따라 변환합니다.
+
+![table-specs](/assets/img/table-specs.png){: .w-80}
 
 이제 MySQL Workbench의 **Forward Engineer**를 이용해 DB 물리 스키마를 생성해보겠습니다.
 
 1. 먼저 Workbench에 테이블 명세서를 바탕으로 ER 다이어그램을 작성합니다.
 
-   1
+   ![workbench-erd-ex-01](/assets/img/workbench-erd-ex-01.png){: .w-80}
 
 2.
