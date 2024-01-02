@@ -42,6 +42,9 @@ jobs:
         uses: ruby/setup-ruby@v1
         with:
           ruby-version: 3.2 # reads from a '.ruby-version' or '.tools-version' file if 'ruby-version' is omitted
+          # 에러 발생
+          # Error: The process '/opt/hostedtoolcache/Ruby/3.3.0/x64/bin/bundle' failed with exit code 5
+          # 해결 > version을 3.2로 변경
           bundler-cache: true
 
       - name: Build site
