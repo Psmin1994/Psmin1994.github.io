@@ -35,8 +35,8 @@ ORM의 특징은 특정 DB에 종속되지 않는다는 것입니다.
 
 - **설치**
 
-  ```js
-  npm i sequelize, sequelize-cli
+  ```console
+  npm i sequelize
   ```
 
 ---
@@ -47,7 +47,7 @@ Sequelize를 사용하기 위해서는 Postgresql , MySQL , MSSQL, SQLite 등의
 
 Mysql을 연결해보겠습니다.
 
-```js
+```console
 npm i mysql2
 ```
 
@@ -57,11 +57,11 @@ npm i mysql2
 
 sequelize-cli 모듈은 sequelize를 조금 더 효율적으로 사용하기 위한 **뼈대를 구축**해줍니다.
 
-```js
+```console
 npm i sequelize-cli
 ```
 
-설치가 완료되면 `sequelize 명령어`를 실행할 수 있습니다.
+설치가 완료되면 **sequelize 명령어**를 실행할 수 있습니다.
 
 ```console
 sequelize init
@@ -144,7 +144,6 @@ app.js를 생성하여 **express와 sequelize를 연결**해보겠습니다.
 
 ```js
 // app.js
-
 const express = require("express");
 
 // index.js에 있는 db.sequelize 객체 모듈을 구조분해로 불러온다.
@@ -196,22 +195,23 @@ define 메서드는 **Sequelize에서 모델을 정의**하는 데 사용되는 
 
 - **주요 매개변수**
 
-  - <kbd>modelName</kbd> : 모델의 이름을 지정합니다.
+  - <kbd>modelName</kbd> : <u>모델의 이름을 지정</u>합니다.
 
     이 이름은 Sequelize에서 사용되며, 데이터베이스에 영향을 주지 않습니다.
 
-  - <kbd>attributes</kbd> : 테이블의 열(컬럼)을 정의하는 객체입니다.
+  - <kbd>attributes</kbd> : <u>테이블의 열(컬럼)을 정의하는 객체</u>입니다.
 
     각 열은 이름, 데이터 유형, 제약 조건 등을 포함합니다.
 
-  - <kbd>options</kbd> : 모델의 추가적인 설정을 지정하는 객체입니다.
+  - <kbd>options</kbd> : <u>모델의 추가적인 설정을 지정하는 객체</u>입니다.
 
-    - **timestamps** : true 설정 시, created_at, updated_at 컬럼이 생성되며 데이터의 생성, 수정 시 시간이 자동으로 입력됩니다.
-    - **paranoid** : true 설정 시, deletedAt 컬럼이 생성되며 지운 시각이 기록됩니다.
+    - **timestamps** : true 설정 시, <u>created_at, updated_at 컬럼이 생성되며 데이터의 생성, 수정 시 시간이 자동으로 입력</u>됩니다.
+    - **paranoid** : true 설정 시, <u>deletedAt 컬럼이 생성되며 지운 시각이 입력</u>됩니다.
 
     - **underscored** : true 설정 시, 카멜케이스 대신 스네이크케이스를 사용
 
     - **freezeTableName** : true 설정 시, 모델이름 변환 X, 지정한 이름 사용
+
     - **tableName** : 테이블 이름 명시적 설정
 
     - **charset** : 인코딩
@@ -220,9 +220,9 @@ define 메서드는 **Sequelize에서 모델을 정의**하는 데 사용되는 
 
 ### users.js 파일
 
-**models** 폴더에 **_users.js_** 파일을 생성합니다.
+models 폴더에 **_users.js_** 파일을 생성합니다.
 
-**class로 모듈화**하고 **import/export를 사용**해보겠습니다.
+**class로 모듈화**하고 **import/export를 활용해 사용**해보겠습니다.
 
 ```js
 // users.js
@@ -272,7 +272,7 @@ sequelize의 자료형은 MySQL과 다르므로 확인 후 사용해야합니다
 
 ### models/index.js 수정
 
-**_index.js_** 파일에 **_users.js_**을 import한 후 연결해보겠습니다.
+**_index.js_** 파일에 **_users.js_** 파일을 import한 후 연결해보겠습니다.
 
 ```js
 const Sequelize = require("sequelize");
