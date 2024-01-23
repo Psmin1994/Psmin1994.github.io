@@ -18,7 +18,7 @@ tags: [React, UI]
 
 사용자가 조작할 때를 기준으로 3가지로 나뉘어집니다.
 
-![compo-categories](/assets/img/compo-categories.png){: .w-80}
+![compo-categories](/assets/img/compo-categories.png){: }
 
 - **탐색 Navication**
 
@@ -48,7 +48,7 @@ tags: [React, UI]
 
   모양, 색상, 크기, 아이콘, 텍스트 등으로 용도에 맞게 주목도를 조절합니다.
 
-  ![compo-shape](/assets/img/compo-shape.png){: .w-80}
+  ![compo-shape](/assets/img/compo-shape.png){: }
 
 - **상태 Status**
 
@@ -56,10 +56,10 @@ tags: [React, UI]
 
   현재 사용할 수 없을 때 클릭할 수 없게하거나, 로딩중을 표시해 기다려야하는 상황을 알려주기도 합니다.
 
-  ![compo-status](/assets/img/compo-status.png){: .w-80}
+  ![compo-status](/assets/img/compo-status.png){: }
 
 - **맥락 Context**
 
   같은 컴포넌트라도 **여러 환경에서 여러 쓰임새에 따라 다양한 형태로 표현**합니다.
 
-  ![compo-context](/assets/img/compo-context.png){: .w-80}
+  ![compo-context](/assets/img/compo-context.png){: }

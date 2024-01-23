@@ -186,7 +186,7 @@ React는 컴포넌트 안에 또 다른 컴포넌트를 쓸 수 있습니다.
 
 이러한 특징으로 **복잡한 화면을 여러 개의 컴포넌트로 나누어 구현** 가능합니다.
 
-![Components](/assets/img/component-merge.png){: .w-80}
+![Components](/assets/img/component-merge.png){: }
 
 ```js
 function Welcome(props) {

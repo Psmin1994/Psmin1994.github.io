@@ -26,7 +26,7 @@ HTTP는 비상태성이라는 특성을 갖습니다.
 
 ## 세션 기반 인증 방식
 
-![session-based-authentication](/assets/img/session-based-authentication.png){: .w-80 .normal}
+![session-based-authentication](/assets/img/session-based-authentication.png){: .normal}
 
 세션 기반 인증 방식은 **사용자의 인증 정보가 서버의 세션 저장소에 저장**됩니다.
 
@@ -58,7 +58,7 @@ HTTP는 비상태성이라는 특성을 갖습니다.
 
 ## 토큰 기반 인증 방식
 
-![token-based-authentication](/assets/img/token-based-authentication.png){: .w-80 .normal}
+![token-based-authentication](/assets/img/token-based-authentication.png){: .normal}
 
 토큰 기반 인증 방식은 세션 기반과 다르게 클라이언트가 직접 인증 정보를 저장합니다.
 

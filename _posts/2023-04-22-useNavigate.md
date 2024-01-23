@@ -65,7 +65,7 @@ to 속성에 이동할 경로를 입력합니다.
   export default App;
   ```
 
-  ![link](/assets/img/link.png){: .w-80}
+  ![link](/assets/img/link.png){: }
 
   즉, 클릭 시 바로 이동하는 로직 구현 시에 사용합니다.
 

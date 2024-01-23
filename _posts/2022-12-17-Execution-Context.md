@@ -73,7 +73,7 @@ tags: [Javascript]
 
 Lexical Environment는 2가지의 구성요소로 이루어져있습니다.
 
-![lexical-environment](/assets/img/lexical-environment.png){: .normal .w-75}
+![lexical-environment](/assets/img/lexical-environment.png){: .normal }
 
 ---
 
@@ -89,7 +89,7 @@ Lexical Environment는 2가지의 구성요소로 이루어져있습니다.
 
 자바스크립트에서 스코프 결정 시 렉시컬 스코프(정적인 스코프)를 따르므로 외부 환경 참조 값의 결정은 함수가 호출된 위치가 아닌 <u>함수가 선언된 위치에 따라 결정</u>된다.
 
-![outer-reference-environment](/assets/img/outer-reference-environment.png){: .normal .w-75}
+![outer-reference-environment](/assets/img/outer-reference-environment.png){: .normal }
 
 ---
 
@@ -198,7 +198,7 @@ function sayHelloOneTime() {
 sayHelloOneTime();
 ```
 
-![execution-context.png](/assets/img/execution-context.png){: .normal .w-75}
+![execution-context.png](/assets/img/execution-context.png){: .normal }
 
 `sayHelloOneTime` 가 호출될 때 `Execution Context` 를 생성합니다.
 

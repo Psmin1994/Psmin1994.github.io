@@ -50,7 +50,7 @@ var joon = new Person();
 var jisoo = new Person();
 ```
 
-![prototype-01](/assets/img/prototype-01.png){: .w-80}
+![prototype-01](/assets/img/prototype-01.png){: }
 
 ---
 
@@ -76,7 +76,7 @@ Person.prototype.getType = function () {
 joon.getType(); // Hi
 ```
 
-![prototype-02](/assets/img/prototype-02.png){: .w-80}
+![prototype-02](/assets/img/prototype-02.png){: }
 
 ---
 
@@ -107,7 +107,7 @@ console.log(joon.age); // 25
 console.log(jisoo.age); // undefined
 ```
 
-![prototype-03](/assets/img/prototype-03.png){: .w-80}
+![prototype-03](/assets/img/prototype-03.png){: }
 
 ---
 
@@ -119,7 +119,7 @@ console.log(jisoo.age); // undefined
 
 여기서 `__proto__` 를 프로토타입 이라고 정의합니다.
 
-![prototype-04](/assets/img/prototype-04.png){: .w-80}
+![prototype-04](/assets/img/prototype-04.png){: }
 
 {: .prompt_tip}
 
@@ -162,7 +162,7 @@ console.log(jisoo.age); // undefined
   console.log(kor2.getName()); // 혁준
   ```
 
-  ![prototype-05](/assets/img/prototype-05.png){: .w-80}
+  ![prototype-05](/assets/img/prototype-05.png){: }
 
 - 프로토타입 공유
   : 부모 생성자를 호출하지 않으면서 프로토타입 객체를 공유하는 방법입니다.
@@ -192,7 +192,7 @@ console.log(jisoo.age); // undefined
   console.log(kor1.getName()); // 지수
   ```
 
-  ![prototype-06](/assets/img/prototype-06.png){: .w-80}
+  ![prototype-06](/assets/img/prototype-06.png){: }
 
 - Object.create() 사용
   : `Object.create()` 를 사용해 객체를 생성과 동시에 프로토타입 객체를 지정합니다.

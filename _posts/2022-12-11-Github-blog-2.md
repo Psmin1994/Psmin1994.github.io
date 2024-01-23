@@ -36,9 +36,9 @@ tags: [Jekyll, Chirpy]
 `Chirpy theme`를 **github**를 통해 다운로드해보겠습니다.
 
 <https://github.com/cotes2020>로 이동합니다.  
-![Github-chirpy](/assets/img/github-chirpy.png){: .normal .w-70}
+![Github-chirpy](/assets/img/github-chirpy.png){: .normal }
 
-![chirpy-zip](/assets/img/github-chirpy-zip.png){: .normal .w-70}
+![chirpy-zip](/assets/img/github-chirpy-zip.png){: .normal }
 
 압축파일을 풀어서 복사한 후, **Clone**한 **Local repository**에 붙여넣습니다.  
 겹치는 파일은 덮어씌워줍니다.
@@ -67,23 +67,23 @@ tags: [Jekyll, Chirpy]
 ```
 
 <http://127.0.0.1:4000/> 또는 <http://localhost:4000/>로 접속합니다.  
- ![chirpy-page](/assets/img/chirpy-page.png){: .normal .w-70}
+ ![chirpy-page](/assets/img/chirpy-page.png){: .normal }
 
-![chirpy-zip](/assets/img/chirpy-multi-files.png){: .normal .w-70}
+![chirpy-zip](/assets/img/chirpy-multi-files.png){: .normal }
 
 > The following destination is shared by multiple files. <br/>The written file may end up with unexpected contents.
 > {: .prompt-danger }  
 >  앞 포스팅에서 jekyll설치 테스트를 위해 서버를 열었을 때 생긴 파일과 **충돌**하는 것 같습니다.
 
 다운받은 **chirpy theme의 파일**만 남겨두고 삭제해줍니다.  
- ![chirpy-conflict](/assets/img/chirpy-conflict-file.png){: .normal .w-70}
+ ![chirpy-conflict](/assets/img/chirpy-conflict-file.png){: .normal }
 
 - `404.html`{: .filepath}
 - `about.markdown`{: .filepath}
 - `index.markdown`{: .filepath}
 
 파일을 삭제해줍니다.  
-![bundle](/assets/img/bundle-serve.png){: .normal .w-70}
+![bundle](/assets/img/bundle-serve.png){: .normal }
 
 ---
 

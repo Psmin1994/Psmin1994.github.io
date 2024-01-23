@@ -18,7 +18,7 @@ tags: [Express, Middleware]
 
 간단하게 말하면 클라이언트에게 요청이 오면 그 요청과 응답 중간에서 목적에 맞게 처리를 하는, 말하자면 거쳐가는 함수들이라고 볼 수 있습니다.
 
-![Middleware](/assets/img/middleware.jpg){: .w-80 .normal}
+![Middleware](/assets/img/middleware.jpg){: .normal}
 
 ---
 

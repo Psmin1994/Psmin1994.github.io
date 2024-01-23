@@ -75,7 +75,7 @@ function About() {
 
 About링크를 누르면 locationObj에 location객체가 저장되고 locationObj가 콘솔에 출력됩니다.
 
-![location-obj](/assets/img/location-obj.png){: .w-80}
+![location-obj](/assets/img/location-obj.png){: }
 
 - **pathname** : path경로 문자열
 - **search** : ?부터 나오는 문자열 전부

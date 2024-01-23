@@ -12,7 +12,7 @@ tags: [Web Server, Was, Reverse Proxy]
 
 ## Web Server
 
-![Web-Server](/assets/img/web-server.jpg){: .w-80 .normal}
+![Web-Server](/assets/img/web-server.jpg){: .normal}
 
 브라우저와 같은 Client로부터 HTTP 프로토콜 요청을 받으면 HTML 문서 등의 **_정적 웹 페이지를 응답_**해주는 소프트웨어를 말합니다.
 
@@ -96,7 +96,7 @@ Web Server는 정적 컨텐츠를 처리하고 WAS는 동적 컨텐츠를 처리
 
 - **_결론_**
 
-  ![Web-Server](/assets/img/web-server-was.png){: .w-80 .normal}
+  ![Web-Server](/assets/img/web-server-was.png){: .normal}
 
   Web Server를 WAS 앞에 두고 처리해 WAS를 Web Server가 필요에 따라 요청할 수 있는 플러그인 형태로 설정하면 효율적인 분산 처리가 가능할 것입니다.
 

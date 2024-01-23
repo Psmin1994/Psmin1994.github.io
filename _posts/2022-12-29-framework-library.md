@@ -161,4 +161,4 @@ tags: [Framework, Library]
 > 즉, 프레임워크는 전체적인 흐름을 자체적으로 가지고 있고, 프로그래머가 그 안에 필요한 코드를 작성합니다.  
 > 라이브러리는 사용자가 흐름에 대해 제어를 하며 필요한 상황에 가져다 쓰는 것입니다.
 
-![framework-library](/assets/img/framework-library.png){: .w-80 .normal}
+![framework-library](/assets/img/framework-library.png){: .normal}

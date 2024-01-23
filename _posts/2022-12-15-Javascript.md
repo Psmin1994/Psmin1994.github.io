@@ -61,7 +61,7 @@ JS engine은 자바스크립트 코드를 실행하는 프로그램 또는 **_�
 
   위 코드가 실행되면서 Call Stack은 아래의 사진처럼 변합니다.
 
-  ![CallStack](/assets/img/call-stack.png){: .w-80 .normal}
+  ![CallStack](/assets/img/call-stack.png){: .normal}
 
 ---
 
@@ -91,7 +91,7 @@ JS 엔진은 **_Single-Thread 기반_**이기 때문에 수행중인 작업이 �
 
 ### 웹 브라우저 환경의 구조
 
-![js-browser](/assets/img/js-browser-logic.png){: .w-80 .normal}
+![js-browser](/assets/img/js-browser-logic.png){: .normal}
 
 - **_JS 엔진_**
 
@@ -131,7 +131,7 @@ JS 엔진은 **_Single-Thread 기반_**이기 때문에 수행중인 작업이 �
 
 ### Node.js의 구조
 
-![js-nodejs](/assets//img/js-nodejs-logic.png){: .w-100 .normal}
+![js-nodejs](/assets//img/js-nodejs-logic.png){: 0 .normal}
 
 Node.js 는 비동기 IO를 지원하기 위해 <kbd>libuv</kbd> 라이브러리를 사용합니다.  
 **_libuv_**는 Event Loop를 제공합니다.

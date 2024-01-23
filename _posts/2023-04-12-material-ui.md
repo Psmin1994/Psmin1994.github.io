@@ -54,7 +54,7 @@ export default BasicButtons;
 
 위 코드의 **variant와 같이 MUI에서 제공해주는 Prop를 설정**해주는 것만으로 다양한 디자인을 쉽게 적용할 수 있습니다.
 
-![mui-button](/assets//img/mui-button.png){: .w-80}
+![mui-button](/assets//img/mui-button.png){: }
 
 ---
 
@@ -85,7 +85,7 @@ MUI의 컨포넌트를 사용자가 직접 커스터마이징할 수도 있습�
   export default BasicButtons;
   ```
 
-  ![mui-button-black](/assets//img/mui-button-black.png){: .w-80}
+  ![mui-button-black](/assets//img/mui-button-black.png){: }
 
   배경색이 검정생으로 변경되었습니다.
 
@@ -124,4 +124,4 @@ MUI의 컨포넌트를 사용자가 직접 커스터마이징할 수도 있습�
   export default BasicButtons;
   ```
 
-  ![mui-button-styled](/assets//img/mui-button-styled.png){: .w-80}
+  ![mui-button-styled](/assets//img/mui-button-styled.png){: }

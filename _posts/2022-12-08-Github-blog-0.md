@@ -27,36 +27,36 @@ SW 개발에 필요한 소스 코드를 관리할 수 있게 해주며 **Linux**
 - [Git 홈페이지](https://git-scm.com/)로 이동합니다.  
   홈페이지에 접속하면 아래의 사진과 같은 모습이 나옵니다. (2022-12-11 작성)  
   <br/>
-  ![git-page](/assets/img/git-page.png){: .normal .w-75}  
+  ![git-page](/assets/img/git-page.png){: .normal }  
   <br/>
-  ![git-download-btn](/assets/img/git-page-download.png){: .normal .w-75}  
+  ![git-download-btn](/assets/img/git-page-download.png){: .normal }  
   <kbd>Download for Windows</kbd> 버튼을 눌러 **Download 페이지**로 넘어갑니다.  
   <br/>
-  ![git-download-page](/assets/img/git-page-download-2.png){: .normal .w-75}  
+  ![git-download-page](/assets/img/git-page-download-2.png){: .normal }  
   <kbd>CLick here to download</kbd> 버튼을 눌러 진행합니다.  
   <br/>
 - Git 설치 프로그램  
   대부분 Default로 수정없이 진행하시고 아래 항목만 수정해주시면 됩니다.  
   <br/>
-  ![git-editor](/assets/img/git-default-editor.png){: .normal .w-75}  
+  ![git-editor](/assets/img/git-default-editor.png){: .normal }  
   <br/>
   저는 **VScode**를 주로 사용할 것이므로 **VScode**를 기준으로 설치를 진행한다.  
   (`Next` 클릭)
   <br/>
-  ![git-editor](/assets/img/git-branch-name.png){: .normal .w-75}  
+  ![git-editor](/assets/img/git-branch-name.png){: .normal }  
   <br/>
   분기 이름을 **master**로 할 것인지 묻습니다.  
   따로 이름을 지정하려면 두번째 항목을 선택하고 입력해줍니다.  
   (초보자분들은 `Let Git decide` 선택하시는 것을 추천드립니다.)  
   <br/>
-  ![git-editor](/assets/img/git-path-enviroment.png){: .normal .w-75}  
+  ![git-editor](/assets/img/git-path-enviroment.png){: .normal }  
   <br/>
   **Bash환경**에서만 사용할 지, **Unix환경**에서 Command Prompt를 사용할 지 묻는 항목입니다.  
   **Git 환경변수**를 이용할 것이기 때문에 2번째 항목을 선택합니다.  
   (**Window**환경에서는 2번이 추천됩니다.)  
   <br/>
   **cmd**창에 `git --version` 입력 시 버전이 잘 나온다면 성공입니다.
-  ![git-check](/assets/img/git-check.png){: .normal .w-75}  
+  ![git-check](/assets/img/git-check.png){: .normal }  
   <br/>
 
 ---
@@ -79,17 +79,17 @@ SW 개발에 필요한 소스 코드를 관리할 수 있게 해주며 **Linux**
 ### VScode 설치
 
 [VScode 홈페이지](https://visualstudio.microsoft.com/ko/)로 이동합니다.  
-![vscode-page](/assets/img/vscode-page.png){: .normal .w-75}  
+![vscode-page](/assets/img/vscode-page.png){: .normal }  
 <br/>
 아래로 스크롤을 내려서 Visual Studio Code를 찾습니다.
-![vscode-download](/assets/img/vscode-page-download.png){: .normal .w-75}  
+![vscode-download](/assets/img/vscode-page-download.png){: .normal }  
 <br/>
 <kbd>Visual Studio 코드 다운로드</kbd> 버튼을 눌러 운영체제에 맞는 설치 파일을 다운로드합니다.  
-![vscode-download-page](/assets/img/vscode-page-download-2.png){: .normal .w-75}  
+![vscode-download-page](/assets/img/vscode-page-download-2.png){: .normal }  
 화면이 넘어가고 다운로드된 VScode 설치 파일을 진행해줍니다.  
 <br/>
 대부분 수정없이 진행해주시고 중간에 `PATH에 추가 항목`을 활성화해줍니다.  
-![vscode-setup](/assets/img/vscode-setup-path.png){: .normal .w-75}  
+![vscode-setup](/assets/img/vscode-setup-path.png){: .normal }  
 <br/>
 
 ---
@@ -116,7 +116,7 @@ Git, VScode에 작업 환경을 만들어보겠습니다.
 ```
 
 다음 명령어로 확인합니다.  
-![git-list](/assets/img/git-list.png){: .normal .w-75}
+![git-list](/assets/img/git-list.png){: .normal }
 
 ---
 
@@ -130,7 +130,7 @@ VScode의 터미널에 **Git Bash**를 설정해서 사용하겠습니다.
 
 1. VScode를 실행합니다.
 2. <kbd>F1</kbd> 입력 -> 'settings' 입력 -> <kbd>Preferences : Open Settings (JSON)</kbd> 클릭
-   ![vscode-settings](/assets/img/vscode-settings.png){: .normal .w-75}
+   ![vscode-settings](/assets/img/vscode-settings.png){: .normal }
 3. `"terminal.integrated.profiles.windows"` 항목에 **Git bash**를 추가해줍니다.
    ```
    "terminal.integrated.profiles.windows": {
@@ -148,10 +148,10 @@ VScode의 터미널에 **Git Bash**를 설정해서 사용하겠습니다.
    ```
 
    터미널 변경 시 입력값은 `"terminal.integrated.profiles.windows"`항목의 입력값과 같아야합니다.  
-   ![vscode-bash](/assets/img/vscode-bash-default.png){: .normal .w-75}
+   ![vscode-bash](/assets/img/vscode-bash-default.png){: .normal }
 
    <kbd>Ctrl</kbd> + <kbd>`</kbd> 단축키로 터미널을 켰을 때 bash가 뜨면 성공입니다.  
-   ![vscode-bash](/assets/img/vscode-bash.png){: .normal .w-75}
+   ![vscode-bash](/assets/img/vscode-bash.png){: .normal }
 
 ---
 

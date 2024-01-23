@@ -209,7 +209,7 @@ const 키워드로 선언된 변수는 항상 일정한 상수 값을 유지합�
 
 ### 정리
 
-![var-let-const](/assets/img/var-let-const.png){: .w-80 .normal}
+![var-let-const](/assets/img/var-let-const.png){: .normal}
 
 ---
 

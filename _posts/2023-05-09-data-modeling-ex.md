@@ -42,7 +42,7 @@ tags: [Workbench, ERD]
 
    얻어낸 정보를 표로 정리해주겠습니다.
 
-   ![ex-01-entity](/assets/img/ex-01-entity.png){: .w-80}
+   ![ex-01-entity](/assets/img/ex-01-entity.png){: }
 
 2. **관계를 추출**합니다.
 
@@ -59,7 +59,7 @@ tags: [Workbench, ERD]
 
      > 강의시간, 강의요일을 기본키로 강의 정보 개체를 만듭니다.
 
-   ![ex-01-relation](/assets/img/ex-01-relation.png){: .w-80}
+   ![ex-01-relation](/assets/img/ex-01-relation.png){: }
 
 3. 작성된 데이터를 바탕으로 **ER 다이어그램을 작성**합니다.
 
@@ -68,7 +68,7 @@ tags: [Workbench, ERD]
    > 과목 개체의 강의시간, 강의장소 속성을 강의 정보라는 개체로 따로 꺼내 주었습니다.  
    > 과목과 강의 정보의 관계는 한 과목에 여러 강의 장소와 시간이 설정될 수 있으므로 1 : N 관계로 설정하겠습니다.
 
-   ![ex-01-erd](/assets/img/ex-01-erd.png){: .w-80}
+   ![ex-01-erd](/assets/img/ex-01-erd.png){: }
 
 ---
 
@@ -86,7 +86,7 @@ tags: [Workbench, ERD]
 
    - 개체가 가지고 있는 키 속성을 릴레이션의 기본 키로 변환합니다.
 
-   ![ex-01-relation-schema-01](/assets/img/ex-01-relation-schema-01.png){: .w-80}
+   ![ex-01-relation-schema-01](/assets/img/ex-01-relation-schema-01.png){: }
 
 2. **N : M 관계는 릴레이션을 변환**
 
@@ -97,7 +97,7 @@ tags: [Workbench, ERD]
    - 관계를 맺고 있는 릴레이션들의 기본 키를 외래키로 가져와 기본 키로 사용합니다.
      (필요 시 별도의 기본 키 지정 가능)
 
-   ![ex-01-relation-schema-02](/assets/img/ex-01-relation-schema-02.png){: .w-80}
+   ![ex-01-relation-schema-02](/assets/img/ex-01-relation-schema-02.png){: }
 
 3. **1 : N 관계는 외래 키로 표현**
 
@@ -110,7 +110,7 @@ tags: [Workbench, ERD]
    > 약한 걔체란?
    > 다른 개체의 존재여부에 의존하는 개체
 
-   ![ex-01-relation-schema-03](/assets/img/ex-01-relation-schema-03.png){: .w-80}
+   ![ex-01-relation-schema-03](/assets/img/ex-01-relation-schema-03.png){: }
 
 4. **1 : 1 관계는 외래 키로 표현**
 
@@ -134,7 +134,7 @@ tags: [Workbench, ERD]
 
 속성의 **데이터 타입**, **길이**, **Null 값 허용 여부**, **기본 값**, **제약 조건** 등을 세부적으로 결정합니다.
 
-![ex-01-table-specs-01](/assets/img/ex-01-table-specs-01.png){: .w-80}
+![ex-01-table-specs-01](/assets/img/ex-01-table-specs-01.png){: }
 
 ---
 
@@ -202,13 +202,13 @@ tags: [Workbench, ERD]
 
 > 참고 글 : [DB 명명 규칙](https://psmin1994.github.io/posts/db-naming/)
 
-![ex-01-table-specs-02](/assets/img/ex-01-table-specs-02.png){: .w-80}
+![ex-01-table-specs-02](/assets/img/ex-01-table-specs-02.png){: }
 
 이제 Workbench에 테이블 명세서를 바탕으로 ER 다이어그램을 작성합니다.
 
 > 참고 글 : [물리적 데이터 모델링](https://psmin1994.github.io/posts/physical-modeling/)
 
-![ex-01-workbench-erd](/assets/img/ex-01-workbench-erd.png){: .w-80}
+![ex-01-workbench-erd](/assets/img/ex-01-workbench-erd.png){: }
 
 Workbench의 **Forward Engineer**를 활용해 테이블을 생성합니다.
 
@@ -286,7 +286,7 @@ Workbench의 **Forward Engineer**를 활용해 테이블을 생성합니다.
 
   - 얻어낸 정보를 표로 정리해주겠습니다.
 
-  ![ex-02-entity](/assets/img/ex-02-entity.png){: .w-80}
+  ![ex-02-entity](/assets/img/ex-02-entity.png){: }
 
 - **관계를 추출**합니다.
 
@@ -312,11 +312,11 @@ Workbench의 **Forward Engineer**를 활용해 테이블을 생성합니다.
     > M : N 관계는 중간 엔티티를 두어 표현합니다.  
     > 발주수량을 속성으로 발주정보 엔티티를 생성합니다.
 
-  ![ex-02-relation](/assets/img/ex-02-relation.png){: .w-80}
+  ![ex-02-relation](/assets/img/ex-02-relation.png){: }
 
 - 작성된 데이터를 바탕으로 **ER 다이어그램을 작성**합니다.
 
-  ![Draw-ERD](/assets/img/ex-02-erd.png){: .w-80}
+  ![Draw-ERD](/assets/img/ex-02-erd.png){: }
 
 ---
 
@@ -328,7 +328,7 @@ Workbench의 **Forward Engineer**를 활용해 테이블을 생성합니다.
 
    E-R 다이어그램의 각 개체를 하나의 릴레이션으로 변환합니다.
 
-   ![ex-02-relation-schema-01](/assets/img/ex-02-relation-schema-01.png){: .w-80}
+   ![ex-02-relation-schema-01](/assets/img/ex-02-relation-schema-01.png){: }
 
 2. **N : M 관계는 릴레이션을 변환**
 
@@ -336,13 +336,13 @@ Workbench의 **Forward Engineer**를 활용해 테이블을 생성합니다.
 
    > 구매정보, 발주정보 개체를 말합니다.
 
-   ![ex-02-relation-schema-02](/assets/img/ex-02-relation-schema-02.png){: .w-80}
+   ![ex-02-relation-schema-02](/assets/img/ex-02-relation-schema-02.png){: }
 
 3. **1 : N 관계는 외래 키로 표현**
 
    <u>1 : N 관계는 릴레이션으로 변환하지 않고 외래 키로만 표현</u>합니다.
 
-   ![ex-02-relation-schema-03](/assets/img/ex-02-relation-schema-03.png){: .w-80}
+   ![ex-02-relation-schema-03](/assets/img/ex-02-relation-schema-03.png){: }
 
 4. **1 : 1 관계는 외래 키로 표현**
 
@@ -354,7 +354,7 @@ Workbench의 **Forward Engineer**를 활용해 테이블을 생성합니다.
 
 속성의 **데이터 타입**, **길이**, **Null 값 허용 여부**, **기본 값**, **제약 조건** 등을 세부적으로 결정합니다.
 
-![ex-02-table-specs-01](/assets/img/ex-02-table-specs-01.png){: .w-80}
+![ex-02-table-specs-01](/assets/img/ex-02-table-specs-01.png){: }
 
 ---
 
@@ -364,13 +364,13 @@ Workbench의 **Forward Engineer**를 활용해 테이블을 생성합니다.
 
 > 참고 글 : [DB 명명 규칙](https://psmin1994.github.io/posts/db-naming/)
 
-![ex-02-table-specs-02](/assets/img/ex-02-table-specs-02.png){: .w-80}
+![ex-02-table-specs-02](/assets/img/ex-02-table-specs-02.png){: }
 
 이제 Workbench에 테이블 명세서를 바탕으로 ER 다이어그램을 작성합니다.
 
 > 참고 글 : [물리적 데이터 모델링](https://psmin1994.github.io/posts/physical-modeling/)
 
-![ex-02-workbench-erd](/assets/img/ex-02-workbench-erd.png){: .w-80}
+![ex-02-workbench-erd](/assets/img/ex-02-workbench-erd.png){: }
 
 Workbench의 **Forward Engineer**를 활용해 테이블을 생성합니다.
 

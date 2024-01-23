@@ -20,7 +20,7 @@ tags: [OSI, Protocol]
 
 서로 다른 시스템이 <u>상호 접속하기 위한 개념을 규정하고 개발 범위를 정하는 것</u>으로 `특정 시스템의 의존도를 낮추고` 기술의 발전 등에 따른 `프로토콜의 확장성`을 고려해 보편적인 개념과 용어를 사용하여 규정하고 있습니다.
 
-![OSI-Layer](/assets/img/osi-layer.png){: .w-80 .normal}
+![OSI-Layer](/assets/img/osi-layer.png){: .normal}
 
 ---
 

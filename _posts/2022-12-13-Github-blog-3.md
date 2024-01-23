@@ -219,19 +219,19 @@ _Full screen width and center alignment_
 - Shadow
 
 ```md
-![Window shadow](/assets/img/img-sample.png){: .shadow width="1548" height="864" .w-75 }
+![Window shadow](/assets/img/img-sample.png){: .shadow width="1548" height="864" }
 ```
 
-![Window shadow](/assets/img/img-sample.png){: .shadow width="1548" height="864" .w-75 }
+![Window shadow](/assets/img/img-sample.png){: .shadow width="1548" height="864" }
 _shadow effect (visible in light mode)_
 
 - Left aligned
 
 ```md
-![Desktop View](/assets/img/img-sample.png){: .w-75 .normal}
+![Desktop View](/assets/img/img-sample.png){: .normal}
 ```
 
-![Desktop View](/assets/img/img-sample.png){: .w-75 .normal}
+![Desktop View](/assets/img/img-sample.png){: .normal}
 
 - Float to left
 

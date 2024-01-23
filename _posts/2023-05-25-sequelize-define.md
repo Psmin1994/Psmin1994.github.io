@@ -167,8 +167,8 @@ app.listen(app.get("port"), () => {
 
 ## 연결 테스트
 
-![sequelize-create-table-define-01](/assets/img/sequelize-create-table-define-01.png){: .w-80}
+![sequelize-create-table-define-01](/assets/img/sequelize-create-table-define-01.png){: }
 
-![sequelize-create-table-define-02](/assets/img/sequelize-create-table-define-02.png){: .w-80}
+![sequelize-create-table-define-02](/assets/img/sequelize-create-table-define-02.png){: }
 
 에러 없이 users 테이블이 잘 생성된 것을 확인할 수 있습니다.

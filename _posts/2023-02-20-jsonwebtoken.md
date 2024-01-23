@@ -102,7 +102,7 @@ tags: [jsonwebtoken]
    console.log(token);
    ```
 
-   ![jwt-ex-01](/assets/img/jwt-ex-01.png){: .w-80 .normal}
+   ![jwt-ex-01](/assets/img/jwt-ex-01.png){: .normal}
 
 2. 생성한 토큰 검증해보기
 
@@ -123,7 +123,7 @@ tags: [jsonwebtoken]
 
    ```
 
-   ![jwt-ex-02](/assets/img/jwt-ex-02.png){: .w-80 .normal}
+   ![jwt-ex-02](/assets/img/jwt-ex-02.png){: .normal}
 
 ---
 

@@ -28,9 +28,9 @@ tags: [Github, Jekyll]
 회원가입은 생략하겠습니다. (회원가입은 구글링하시면 바로 나오니 어렵지 않습니다.😊)
 
 - 가입이 완료된 후 <kbd>New</kbd>버튼을 눌러 `Repository` (저장소)를 생성합니다.
-  ![New-repo](/assets/img/github-repo-new.png){: .normal .w-80}
+  ![New-repo](/assets/img/github-repo-new.png){: .normal }
 
-  ![Create-repo](/assets/img/github-repo-create.png){: .normal .w-80}
+  ![Create-repo](/assets/img/github-repo-create.png){: .normal }
 
   **Repository name**에는 저장소의 이름을 지정합니다.  
    (**Owner**는 변경하지 마시고, **Repository name**항목은 **username.github.io**를 입력합니다.)
@@ -38,12 +38,12 @@ tags: [Github, Jekyll]
   **Public**, **Add a README file**만 체크 후 맨 아래의 **Create repository**를 클릭합니다.
 
 - URL에 **username.github.io** 입력 시 아래 사진처럼 나온다면 성공입니다!  
-  ![Page-init](/assets/img/github-page-init.png){: .normal .w-80}
+  ![Page-init](/assets/img/github-page-init.png){: .normal }
 
 - 안될 때 시도 해볼 수 있는 방법입니다.
-  ![Page-setting](/assets/img/github-page-setting.png){: .normal .w-80}
+  ![Page-setting](/assets/img/github-page-setting.png){: .normal }
 
-  ![Page-branch](/assets/img//github-page-branch.png){: .normal .w-80}
+  ![Page-branch](/assets/img//github-page-branch.png){: .normal }
 
   **Page** 카테고리에서 **Branch** 설정을 확인하시고 사진과 같이 설정 후 `SAVE` 해줍니다.  
   **Your site in live at ...**이 나타나면 페이지에 들어가셔서 확인해봅니다.  
@@ -64,13 +64,13 @@ tags: [Github, Jekyll]
 - **VScode** 실행 후 <kbd>F1</kbd> -> <kbd>git clone</kbd> 클릭
 - <kbd>Github에서 복제</kbd> 클릭
 - 연동할 Repository의 **Web URL**을 복사해 입력합니다.  
-   ![github-https](/assets/img/github-https.png){: .normal .w-80}
+   ![github-https](/assets/img/github-https.png){: .normal }
 
   **Owner/repository**로도 입력 가능합니다.
-  ![github-clone](/assets/img/vscode-clone.png){: .normal .w-80}
+  ![github-clone](/assets/img/vscode-clone.png){: .normal }
 
 - 연동할 Local Repository를 선택합니다.  
-  ![local-repo](/assets/img/local-repo.png){: .normal .w-80}  
+  ![local-repo](/assets/img/local-repo.png){: .normal }  
   선택한 폴더에서 **Git repository**와 같은 이름의 폴더가 생성되고 폴더 안에 <kbd>.git</kbd> 폴더가 생성되며 연동됩니다.
 
 ---
@@ -96,18 +96,18 @@ tags: [Github, Jekyll]
  <br/>
 
 - VScode의 왼쪽 메뉴에서 **소스 제어** 항목으로 이동합니다.  
-  ![local-repo](/assets/img/vscode-source-control.png){: .normal .w-80}
+  ![local-repo](/assets/img/vscode-source-control.png){: .normal }
 
 - <kbd>+</kbd> 버튼으로 간단하게 변경 사항을 **스테이징** 할 수 있습니다. (`git add`와 같습니다.)  
-  ![local-repo](/assets/img/vscode-git-add.png){: .normal .w-80}
+  ![local-repo](/assets/img/vscode-git-add.png){: .normal }
 - 간단한 메세지를 적고 <kbd>commit</kbd> 버튼을 클릭합니다. (`git commit`과 같습니다.)  
-  ![local-repo](/assets/img/vscode-git-commit.png){: .normal .w-80}
+  ![local-repo](/assets/img/vscode-git-commit.png){: .normal }
 - **commit** 후 <kbd>변경 내용 동기화</kbd> 버튼을 클릭합니다. (`git push`와 같습니다.)
-  ![local-repo](/assets/img/vscode-git-push.png){: .normal .w-80}
+  ![local-repo](/assets/img/vscode-git-push.png){: .normal }
 - 첫 push 시 알림 팝업이 뜨고 <kbd>확인</kbd> 버튼을 클릭 시 push 권한 여부 확인을 위한 절차가 진행됩니다. (push 이후 페이지에 반영되기까지 시간이 걸릴 수 있습니다.)  
-  ![local-repo](/assets/img/vscode-git-push-popup.png){: .normal .w-80}
+  ![local-repo](/assets/img/vscode-git-push-popup.png){: .normal }
 - 절차 완료 후 **Web URL**에 `username.github.io` 입력 시 **Hello, World!!**가 나타난다면 성공입니다.  
-  ![local-repo](/assets/img/test-page.png){: .normal .w-80}
+  ![local-repo](/assets/img/test-page.png){: .normal }
 
 ---
 
@@ -129,11 +129,11 @@ tags: [Github, Jekyll]
 `Jekyll`을 **설치**하기 위해서는 먼저 `Ruby`를 설치해야합니다.
 
 - 먼저 [Ruby 다운로드 사이트](https://rubyinstaller.org/downloads/)에서 `Ruby+Devkit 3.X.X (x64)` 를 다운로드합니다.  
-  ![Ruby-check](/assets/img/ruby-install.png){: .normal .w-75}  
+  ![Ruby-check](/assets/img/ruby-install.png){: .normal }  
   설치는 수정 없이 **Next**만 누르시면 됩니다.
 
 - Ruby가 잘 설치됐는지 확인해봅니다.  
-  ![Ruby-check](/assets/img/ruby-check.png){: .normal .w-75}
+  ![Ruby-check](/assets/img/ruby-check.png){: .normal }
 
 ---
 
@@ -148,7 +148,7 @@ tags: [Github, Jekyll]
   ```
 
   이동한 후 경로에 한글이 깨질 수 있으니 UTF-8 인코딩합니다.  
-  ![cmd-chcp](/assets/img/cmd-chcp.png){: .normal .w-75}  
+  ![cmd-chcp](/assets/img/cmd-chcp.png){: .normal }  
   `Active code page: 65001`가 보이면 정상입니다.
 
 - 이동한 경로에서 **Jekyll, bundle** 설치합니다. 이후 **webrick**까지 설치합니다.
@@ -179,4 +179,4 @@ tags: [Github, Jekyll]
   ```
 
   정상적으로 실행된다면 <http://127.0.0.1:4000/> 또는 <http://localhost:4000/>로 접속합니다.  
-  ![welcome-jekyll](/assets/img/welcome-jekyll.png){: .normal .w-85}
+  ![welcome-jekyll](/assets/img/welcome-jekyll.png){: .normal }
