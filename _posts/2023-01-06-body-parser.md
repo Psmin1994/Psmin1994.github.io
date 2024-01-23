@@ -151,6 +151,7 @@ Postman를 이용하여 HTTP 본문(body) 에 name 과 age 프로퍼티를 갖�
 여기서 주의할 점은 HTTP 본문(body) 의 type 이 JSON 이라는 것을 설정해줘야 합니다.
 
 ![Body-parser-01](/assets/img/postman-bodyparser-01.png){: .normal}
+
 req.body.name 과 req.body.age가 잘 확인됩니다.
 
 다음은 HTTP 본문(body) 에는 name 과 age key를 갖는 form 데이터를 넣어보겠습니다.
@@ -158,6 +159,7 @@ req.body.name 과 req.body.age가 잘 확인됩니다.
 여기서도 주의할 점은 보내고자하는 HTTP 본문(body) 의 type 이 “x-www-form-urlencoded” 이라는 것을 설정해줘야 합니다.
 
 ![Body-parser-02](/assets/img/postman-bodyparser-02.png){: .normal}
+
 잘 접근되는 것을 확인 할 수 있습니다.
 
 ---

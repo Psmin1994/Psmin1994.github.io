@@ -16,7 +16,7 @@ tags: [Javascript, Asynchronous]
 
 즉, **직렬적으로 작업을 수행**하기 때문에 요청과 동시에 그 응답이 요청을 요구한 자리에 바로 주어져야하므로 응답이 올 때 까지 기다려야 한다는 단점이 있습니다.
 
-![synchronous](/assets/img/synchronous.png){: .normal }
+![synchronous](/assets/img/synchronous.png){: .normal}
 
 ---
 
