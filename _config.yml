@@ -96,10 +96,10 @@ comments:
     issue_term: # < url | pathname | title | ...>
   # Giscus options › https://giscus.app
   giscus:
-    repo: "Psmin94/giscus" # <gh-username>/<repo>
+    repo: "Psmin1994/giscus" # <gh-username>/<repo>
     repo_id: "R_kgDOIkwkLw"
     category: "Announcements"
-    category_id: "DIC_kwDOIkwkL84CS9Ji"
+    category_id: "DIC_kwDOIkwkL84CS9Jj"
     mapping: "pathname" # optional, default to 'pathname'
     input_position: "top" # optional, default to 'bottom'
     lang: "ko" # optional, default to the value of `site.lang`
