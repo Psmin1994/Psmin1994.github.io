@@ -1,7 +1,7 @@
 ---
 title: 사용자 스토리 (User Story)
 author: Psmin
-data: 2023-06-01 19:32:46 +0900
+data: 2023-06-03 19:32:46 +0900
 categories: [Knowledge, CS]
 tags: [User Story]
 ---

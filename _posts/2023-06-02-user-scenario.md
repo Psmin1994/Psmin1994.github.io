@@ -6,11 +6,11 @@ categories: [Knowledge, CS]
 tags: [User Scenarios]
 ---
 
-# 사용자 스토리 작성해보자.
+# 사용자 스토리를 작성해보자.
 
 ---
 
-##
+## 페르소나 설정
 
 ---
 
