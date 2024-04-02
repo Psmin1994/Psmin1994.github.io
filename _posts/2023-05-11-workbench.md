@@ -1,5 +1,5 @@
 ---
-title: 테이블을 ERD로 변환 (Mysql Workbench)
+title: 테이블을 ERD로 변환
 author: Psmin
 data: 2023-05-11 19:01:23 +0900
 categories: [Knowledge, CS]

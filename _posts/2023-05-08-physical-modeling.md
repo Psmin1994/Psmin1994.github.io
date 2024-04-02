@@ -1,5 +1,5 @@
 ---
-title: 물리적 데이터 모델링 (Mysql Workbench)
+title: 물리적 데이터 모델링
 author: Psmin
 data: 2023-05-08 19:01:23 +0900
 categories: [Knowledge, CS]

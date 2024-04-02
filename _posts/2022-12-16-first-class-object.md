@@ -1,5 +1,5 @@
 ---
-title: 일급 객체 (First Class Object)
+title: 일급 객체 First Class Object
 author: Psmin
 data: 2022-12-16 20:30:31 +0900
 categories: [Knowledge, Javascript]
