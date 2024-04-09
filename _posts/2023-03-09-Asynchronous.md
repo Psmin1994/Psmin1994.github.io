@@ -1,9 +1,9 @@
 ---
-title: 동기, 비동기 처리
+title: 동기 / 비동기
 author: Psmin
 data: 2023-03-09 20:59:22 +0900
 categories: [Knowledge, Javascript]
-tags: [Javascript, Asynchronous]
+tags: [Javascript, Synchronous, Asynchronous]
 ---
 
 # Javascript에서의 동기, 비동기에 대해 알아보자.

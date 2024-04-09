@@ -1,14 +1,14 @@
 ---
-title: Prototype과 __proto__
+title: [[prototype]] / .Prototype / __proto__
 author: Psmin
-data: 2023-06-15 22:11:56 +0900
+data: 2023-06-27 22:11:56 +0900
 categories: [Knowledge, Javascript]
 tags: [Prototype]
 ---
 
 ## 프로토타입 기반 언어
 
-Java, C++과 같은 클래스 기반 객체지향 프로그래밍 언어와 달리 자바스크립트는 ES6에서 Class(이하 클래스)가 도입되었지만 **프로토타입 기반 언어**입니다.
+Java, C++과 같은 클래스 기반 객체지향 프로그래밍 언어와 달리 자바스크립트는 **프로토타입 기반 언어**입니다.
 
 객체 원형인 **프로토타입을 이용해 새로운 객체를 생성**합니다.
 
@@ -16,13 +16,39 @@ Java, C++과 같은 클래스 기반 객체지향 프로그래밍 언어와 달�
 
 프로토타입은 객체를 확장하고 객체 지향적인 프로그래밍을 할 수 있도록 도와줍니다.
 
-따라서 자바스크립트의 동작 원리를 이해하기 위해서는 프로토타입의 개념을 잘 이해하고 있어야 합니다.
+```js
+let Korean = (name) => {
+  this.name = name;
+};
 
-프로토타입은 크게 2가지가 있습니다.
+Korean.prototype.hello = (name) => {
+  console.log(`hello, my name is ${this.name}`);
+};
 
-먼저 프로토타입 객체를 참조하는 **prototype 속성**이 있고, 객체 멤버인 **proto 속성이 참조하는 숨은 링크**가 있습니다.
+let kim = new Korean("Kim");
 
-둘의 차이점을 이해하기 위해 함수와 객체 내부 구조부터 알아보겠습니다.
+kim.hello(); // Kim
+```
+
+---
+
+## 포로토타입 객체
+
+> object that provides shared properties for other objects
+
+ECMA-262에서 프로토타입 객체는 다른 객체에 공유 프로퍼티(메서드 포함)를 제공하는 객체를 말합니다.
+
+모든 객체는 `[[Prototype]]`이라는 내부 슬롯(자바스크립트 엔진의 내부 로직)을 갖으며, 이 는 상속을 구현하는 프로토타입 객체를 말합니다.
+
+---
+
+## \_\_proto\_\_
+
+`[[Prototype]]` 내부 슬롯에는 직접 접근이 불가능하며 `__proto__` 프로퍼티로 접근할 수 있습니다.
+
+---
+
+## 함수 객체의 prototype 프로퍼티
 
 ---
 
@@ -162,7 +188,6 @@ console.log(jisoo.age); // undefined
   console.log(kor1.getName()); // 혁준
 
   var kor2 = new Korean("지수");
-  // Person의 프로토타입 객체에 선언된 메소드도 사용 가능
   console.log(kor2.getName()); // 혁준
   ```
 
