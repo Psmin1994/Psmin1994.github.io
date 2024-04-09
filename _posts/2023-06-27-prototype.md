@@ -1,5 +1,5 @@
 ---
-title: [[prototype]] / .Prototype / __proto__
+title: 프로토타입 prototype
 author: Psmin
 data: 2023-06-27 22:11:56 +0900
 categories: [Knowledge, Javascript]
@@ -11,8 +11,6 @@ tags: [Prototype]
 Java, C++과 같은 클래스 기반 객체지향 프로그래밍 언어와 달리 자바스크립트는 **프로토타입 기반 언어**입니다.
 
 객체 원형인 **프로토타입을 이용해 새로운 객체를 생성**합니다.
-
-생성된 객체는 또 다른 객체의 원형이 될 수 있습니다.
 
 프로토타입은 객체를 확장하고 객체 지향적인 프로그래밍을 할 수 있도록 도와줍니다.
 
@@ -45,6 +43,10 @@ ECMA-262에서 프로토타입 객체는 다른 객체에 공유 프로퍼티(�
 ## \_\_proto\_\_
 
 `[[Prototype]]` 내부 슬롯에는 직접 접근이 불가능하며 `__proto__` 프로퍼티로 접근할 수 있습니다.
+
+![prototype-obj](/assets/img/prototype-obj.png){: .normal}
+
+여기서 주의할 점은 `__proto__`
 
 ---
 
