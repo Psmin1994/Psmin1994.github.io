@@ -182,7 +182,7 @@ export default Nav;
   - **searchParams** : 데이터의 값
   - **setSearchParams** : 데이터를 변경시킬 수 있는 함수
 
-  - **여러 메소드**
+  - **여러 메서드**
 
     - _searchParams.get(key)_ : 입력한 key의 value를 하나 가져오는 메서드
 

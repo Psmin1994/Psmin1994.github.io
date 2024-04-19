@@ -12,13 +12,13 @@ Java, C++과 같은 클래스 기반 객체지향 프로그래밍 언어와 달�
 
 프로토타입은 객체 간의 **상속을 구현**하기 위해 사용됩니다.
 
-**프로토타입 체인**을 통해 객체는 다른 객체의 속성과 메소드를 상속받을 수 있습니다.
+**프로토타입 체인**을 통해 객체는 다른 객체의 속성과 메서드를 상속받을 수 있습니다.
 
-<u>이는 코드의 재사용성을 높이고 메모리를 효율적으로 사용할 수 있게 도와줍니다.</u>
+<u>코드의 재사용성을 높이고 메모리를 효율적으로 사용할 수 있게 도와줍니다.</u>
 
-프로토타입은 객체를 확장하고 객체 지향적인 프로그래밍을 할 수 있도록 도와줍니다.
+또한, <u>객체를 확장하고 객체 지향적인 프로그래밍</u>을 할 수 있도록 도와줍니다.</u>
 
-- **간단 예제**
+- **예제 코드**
 
   ```js
   let Person = (name) => {
@@ -34,17 +34,17 @@ Java, C++과 같은 클래스 기반 객체지향 프로그래밍 언어와 달�
   joon.hello(); // joon
   ```
 
-위 코드에서 **joon은 hello 메소드를 상속받아 사용**할 수 있습니다.
+위 코드에서 **joon은 hello 메서드를 상속받아 사용**할 수 있습니다.
 
 ---
 
 ## 포로토타입 객체
 
-ECMA-262에서 프로토타입 객체란 <u>다른 객체에 공유 프로퍼티(메서드 포함)를 제공하는 객체</u>를 말합니다.
+ECMA-262에서 프로토타입 객체란 <u>다른 객체에 공유 프로퍼티를 제공하는 객체</u>를 말합니다.
 
 > object that provides shared properties for other objects
 
-자바스크립트의 모든 객체는 자신의 부모 역할을 담당하는 객체와 연결되어 있고, 부모 객체의 프로퍼티 또는 메소드를 상속받아 사용할 수 있습니다.
+자바스크립트의 모든 객체는 자신의 부모 역할을 담당하는 객체와 연결되어 있고, 부모 객체의 프로퍼티 또는 메서드를 상속받아 사용할 수 있습니다.
 
 이러한 부모 객체를 프로토타입 객체라고 합니다.
 
@@ -55,8 +55,6 @@ ECMA-262에서 프로토타입 객체란 <u>다른 객체에 공유 프로퍼티
 ### 프로토타입 객체 접근
 
 `[[Prototype]]` 내부 슬롯에는 직접 접근이 불가능하며 `__proto__` 프로퍼티로 접근할 수 있습니다.
-
-`__proto__` 프로퍼티에 접근하면 내부적으로 `Object.getPrototypeOf`가 호출되어 프로토타입 객체를 반환합니다.
 
 ![prototype-obj](/assets/img/prototype-obj.png){: .normal}
 
@@ -92,13 +90,11 @@ console.log(joon.__proto__ === foo.prototype); // true
 
 ### Object.getPrototypeOf()를 사용하자.
 
-`__proto__` 속성으로 직접 접근하는 것은 권장하지 않습니다.
+<u>`__proto__` 속성으로 직접 접근하는 것은 권장하지 않습니다.</u>
 
 ES6에서 표준으로 채택되었지만 모든 객체가 `__proto__`를 사용할 수 있는 것은 아닙니다.
 
-따라서, 프로토타입에 접근할 때는 `Object.getPrototypeOf` 메서드를 사용할 것을 권장합니다.
-
-프로토타입을 변경할 경우에는 `Object.setPrototypeOf` 메서드를 사용할 것을 권장합니다.
+따라서, 프로토타입에 접근할 때는 `Object.getPrototypeOf` 메서드를 프로토타입을 변경할 떄는 `Object.setPrototypeOf` 메서드를 사용할 것을 권장합니다.
 
 ```js
 function Person(name) {
@@ -121,13 +117,13 @@ console.log(Object.getPrototypeOf(joon) === foo.prototype); // true
 {: .prompt-info}
 
 > 프로토타입 객체를 변경하는 것은 객체의 상속 체계에 큰 영향을 줍니다.  
-> 따라서 가급적 객체를 생성할 시점에 프로토타입을 설정해주는 것이 더 바람직합니다.
+> 따라서, <u>가급적 객체를 생성할 시점에 프로토타입을 설정해주는 것이 더 바람직합니다.</u>
 
 ---
 
 ## 함수 객체의 prototype 프로퍼티
 
-`prototype` 프로퍼티는 생성자 함수로 호출할 수 있는 객체, 즉 `constructor`를 소유하는 프로퍼티입니다.
+함수 객체의 `prototype` 프로퍼티는 생성자 함수로 호출할 수 있는 객체, 즉 `constructor`를 소유하는 프로퍼티입니다.
 
 함수 객체만 갖는 프로퍼티로 함수 객체가 생성자로 사용될 때 이 함수를 통해 생성될 객체의 부모 역할을 하는 프로토타입 객체를 가리킵니다.
 
@@ -136,19 +132,16 @@ function Person() {}
 
 var joon = new Person();
 
-// Person() 생성자 함수에 의해 생성된 객체를 생성한 객체는 Person() 생성자 함수이다.
 console.log(Person.prototype.constructor === Person);
 
-// joon 객체를 생성한 객체는 Person() 생성자 함수이다.
 console.log(Object.getPrototypeOf(joon).constructor === Person);
 ```
 
 ---
 
-{: .prompt-tip}
+여기서 중요한 것은 Person 함수의 prototype 속성이 참조하는 프로토타입 객체는 `new`라는 연산자와 Person 함수를 통해 생성된 모든 객체(인스턴스)의 원형이 되는 객체입니다.
 
-> 여기서 중요한 것은 Person 함수의 prototype 속성이 참조하는 프로토타입 객체는 new라는 연산자와 Person 함수를 통해 생성된 모든 객체(인스턴스)의 원형이 되는 객체입니다.  
-> 생성된 **모든 객체가 참조하는 것**을 기억합시다.
+생성된 **모든 객체가 참조하는 것**을 기억합시다.
 
 ```js
 function Person() {}
@@ -161,18 +154,18 @@ var jisoo = new Person();
 
 ---
 
-생성된 모든 객체는 프로토타입 객체에 접근할 수 있습니다.
+또한, 생성된 모든 객체는 **프로토타입 객체에 접근**할 수 있습니다.
 
-즉, 같은 원형을 갖는 객체는 프로토타입 객체에 추가된 프로퍼티나 메서드를 사용할 수 있습니다.
+즉, 같은 원형을 갖는 객체는 모두 프로토타입 객체에 추가된 프로퍼티나 메서드를 사용할 수 있습니다.
 
-추가되기 전 생성된 객체들도 사용할 수 있습니다.
+> 추가되기 전 생성된 객체들도 사용할 수 있습니다.
 
 ```js
 function Person() {}
 
 var joon = new Person();
 
-// 함수 객체의 prototype 프로퍼티를 사용해 메소드를 추가
+// 함수 객체의 prototype 프로퍼티를 사용해 메서드를 추가
 Person.prototype.getType = function () {
   console.log("Hi");
 };
@@ -219,19 +212,11 @@ console.log(jisoo.age); // undefined
 
 ## 프로토타입 상속 예제
 
-자바스크립트는 클래스가 없기 때문에 프로토타입을 이용하여 코드 재사용을 구현해보겠습니다.
-
-- **기본 방법**
-
-  부모에 해당하는 함수를 이용하여 객체를 생성합니다.
-
-  자식에 해당하는 함수의 prototype 속성을 부모 함수를 이용하여 생성한 객체를 참조하는 방법입니다.
-
-  kor2 객체를 생성할 때 Korean 함수의 인자로 '지수'라고 주었지만 부모 생성자에게 인자를 넘겨주지 않아 name에는 기본값인 혁준이 들어있습니다.
+- **부모 함수를 이용하여 생성한 객체를 참조**
 
   ```js
   function Person(name) {
-    this.name = "혁준";
+    this.name = "joon";
   }
 
   Person.prototype.getName = function () {
@@ -244,27 +229,16 @@ console.log(jisoo.age); // undefined
   // 해당 생성자 함수의 .prototype 속성을 Person 객체로 설정
   Korean.prototype = new Person();
 
-  var kor1 = new Korean();
-  // Person의 프로토타입 객체에 선언된 메소드도 사용 가능
-  console.log(kor1.getName()); // 혁준
-
-  var kor2 = new Korean("지수");
-  console.log(kor2.getName()); // 혁준
+  let joon = new Korean();
+  // Person의 프로토타입 객체에 선언된 메서드도 사용 가능
+  console.log(joon.getName()); // joon
   ```
 
-  ![prototype-05](/assets/img/prototype-05.png){: }
-
-- **프로토타입 공유**
-
-  부모 생성자를 호출하지 않으면서 프로토타입 객체를 공유하는 방법입니다.
-
-  자식 함수의 .prototype 속성을 부모 함수의 .prototype 속성이 참조하는 객체로 설정합니다.
-
-  자식 함수를 통해 생성된 객체는 부모 함수를 통해 생성된 객체를 거치지 않고 부모 함수의 프로토타입 객체를 부모로 지정하여 객체를 생성합니다.
+- **부모 함수의 프로토타입 객체를 참조**
 
   ```js
   function Person(name) {
-    this.name = name || "혁준";
+    this.name = name || "joon";
   }
 
   Person.prototype.getName = function () {
@@ -276,36 +250,10 @@ console.log(jisoo.age); // undefined
     this.name = name;
   }
 
-  // 자식 함수의 .prototype 속성을 부모 함수의 .prototype 속성이 참조하는 객체로 설정
+  // 자식 함수의 .prototype 속성을 부모 함수의 .prototype 속성으로 설정
   Korean.prototype = Person.prototype;
 
-  var kor1 = new Korean("지수");
-  console.log(kor1.getName()); // 지수
-  ```
+  var kim = new Korean("kim");
 
-  ![prototype-06](/assets/img/prototype-06.png){: }
-
-- **Object.create() 사용**
-
-  `Object.create()` 를 사용해 객체를 생성과 동시에 프로토타입 객체를 지정합니다.
-
-  첫 번째 매개변수는 부모 객체로 사용할 객체이고, 두 번째 매개변수는 반환될 자식 객체에 추가할 속성입니다.
-
-  ```js
-  var person = {
-    type: "인간",
-    getType: function () {
-      return this.type;
-    },
-    getName: function () {
-      return this.name;
-    },
-  };
-
-  var joon = Object.create(person);
-
-  joon.name = "혁준";
-
-  console.log(joon.getType()); // 인간
-  console.log(joon.getName()); // 혁준
+  console.log(kim.getName()); // kim
   ```

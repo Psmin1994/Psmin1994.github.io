@@ -42,9 +42,9 @@ Javascript는 숫자에 대해 **64비트 부동소수점** 표현을 사용합�
 
 ### 해결방법
 
-- **toFixed() 메소드**
+- **toFixed() 메서드**
 
-  Number 객체의 toFixed() 메소드를 활용합니다.
+  Number 객체의 toFixed() 메서드를 활용합니다.
 
   인수만큼 자리수를 반올림하여 문자열로 반환해주는 함수입니다.
 
@@ -54,9 +54,9 @@ Javascript는 숫자에 대해 **64비트 부동소수점** 표현을 사용합�
 
 - **Math.round()**
 
-  Math 객체의 round() 메소드를 활용합니다.
+  Math 객체의 round() 메서드를 활용합니다.
 
-  반올림 메소드로 인수를 반올림한 후 가까운 정수로 반환해주는 함수입니다.
+  반올림 메서드로 인수를 반올림한 후 가까운 정수로 반환해주는 함수입니다.
 
   ![floating-round](/assets/img/floating-round.png){: .normal}
 

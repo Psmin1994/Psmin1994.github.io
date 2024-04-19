@@ -22,7 +22,7 @@ async / await는 **Promise를 쉽게 사용할 수 있도록** 도와주는 Prom
 
 ```js
 async function 함수명() {
-  await 비동기_처리_메소드명();
+  await 비동기_처리_메서드명();
 }
 ```
 

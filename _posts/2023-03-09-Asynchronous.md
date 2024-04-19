@@ -134,19 +134,19 @@ func(() => {
   | rejected  |  비동기 실패   |       reject 함수가 호출된 상태        |
   |  settled  |  비동기 완료   | resolve 또는 reject 함수가 호출된 상태 |
 
-- **후속 처리 메소드**
+- **후속 처리 메서드**
 
   **Promise 객체의 후속 처리 Method (then, catch)**를 총해 <u>비동기 처리 결과, 에러 메세지</u>를 전달 받아 처리합니다.
 
-  - **then 메소드**
+  - **then 메서드**
 
-    - then 메소드는 2개의 callback 함수를 인자로 전달 받습니다.
+    - then 메서드는 2개의 callback 함수를 인자로 전달 받습니다.
     - 첫 번째 인자는 성공 시 실행됩니다. ( 즉, fulfilled 상태, resolve 함수가 호출된 경우)
     - 두 번쨰 인자는 실패 시 실행됩니다. ( 즉, rejected 상태, reject 함수가 호출된 경우)
 
-  - **catch 메소드**
+  - **catch 메서드**
 
-    - catch 메소드는 비동기 처리와 then 메소드 실행 중 예외 발생 시 호출됩니다.
+    - catch 메서드는 비동기 처리와 then 메서드 실행 중 예외 발생 시 호출됩니다.
 
   ```js
   const promise = new Promise((resolve, reject) => {
@@ -169,7 +169,7 @@ func(() => {
 
   Promise를 이용한 에러 처리 방법은 2가지가 있습니다.
 
-  - then 메소드의 두 번째 인자로 에러 처리하는 방법
+  - then 메서드의 두 번째 인자로 에러 처리하는 방법
 
   ```js
   const promise = () => {
@@ -196,7 +196,7 @@ func(() => {
 
   <br/>
 
-  - catch 메소드를 이용해 에러 처리하는 방법
+  - catch 메서드를 이용해 에러 처리하는 방법
 
   ```js
   const promise = () => {
@@ -222,9 +222,9 @@ func(() => {
 
 ---
 
-### catch 메소드를 사용하는 이유
+### catch 메서드를 사용하는 이유
 
-**catch 메소드**를 모든 then 메소드를 호출한 이후에 호출하면 <u>비동기 처리에서 발생한 에러(reject 상태)</u>뿐만 아니라 <u>then 메서드 내부</u>에서 발생한 에러까지 처리할 수 있습니다.
+**catch 메서드**를 모든 then 메서드를 호출한 이후에 호출하면 <u>비동기 처리에서 발생한 에러(reject 상태)</u>뿐만 아니라 <u>then 메서드 내부</u>에서 발생한 에러까지 처리할 수 있습니다.
 
 ```js
 const promise = () =>
