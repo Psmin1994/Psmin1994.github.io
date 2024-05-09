@@ -1,7 +1,7 @@
 ---
 title: 완전 탐색 Brute Force
 author: Psmin
-data: 2023-09-06 17:32:15 +0900
+data: 2023-09-15 17:32:15 +0900
 categories: [코딩테스트, 알고리즘]
 tags: [Brute Force]
 ---

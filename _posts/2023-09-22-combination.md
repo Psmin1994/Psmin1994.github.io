@@ -1,7 +1,7 @@
 ---
 title: 순열과 조합
 author: Psmin
-data: 2023-09-14 20:32:23 +0900
+data: 2023-09-22 20:32:23 +0900
 categories: [코딩테스트, 알고리즘]
 tags: [permutation, Combination]
 ---

@@ -1,7 +1,7 @@
 ---
 title: 타입 변환 Type casting
 author: Psmin
-data: 2023-07-07 22:17:33 +0900
+data: 2023-07-10 22:17:33 +0900
 categories: [Knowledge, Javascript]
 tags: [Javascript]
 ---

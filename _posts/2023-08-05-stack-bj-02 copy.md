@@ -1,5 +1,5 @@
 ---
-title: 백준 알고리즘 문제 - 02
+title: 백준 스택 문제 - 02
 author: Psmin
 data: 2023-08-05 17:27:33 +0900
 categories: [코딩테스트, Backjoon]
@@ -37,31 +37,105 @@ class Stack {
   }
 }
 
-let sol = (input) => {
-  let stack = new Stack();
-  let answer = [];
+let stack = new Stack();
+let answer = [];
 
-  let cnt = 1;
+let cnt = 1;
 
-  for (let j = 1; j <= input[0]; j++) {
-    while (stack.peek() < input[j]) {
-      stack.push(cnt++);
-      answer.push("+");
-    }
+for (let j = 1; j <= input[0]; j++) {
+  while (stack.peek() < input[j]) {
+    stack.push(cnt++);
+    answer.push("+");
+  }
 
-    if (stack.peek() == input[j]) {
-      stack.pop();
+  if (stack.peek() == input[j]) {
+    stack.pop();
 
-      answer.push("-");
-    } else {
-      return console.log("NO");
+    answer.push("-");
+  } else {
+    return console.log("NO");
+  }
+}
+
+console.log(answer.join("\n"));
+```
+
+---
+
+## 4949번 문제 - 균형잡힌 세상
+
+[백준 4949번 문제](https://www.acmicpc.net/problem/4949)
+
+---
+
+### 풀이
+
+```js
+const filePath = process.platform !== "linux" ? "./test.txt" : "dev/stdin";
+
+let input = require("fs").readFileSync(filePath).toString().trim().split("\n");
+
+class Stack {
+  constructor() {
+    this._arr = [];
+  }
+
+  push(data) {
+    this._arr.push(data);
+  }
+
+  pop() {
+    return this._arr.pop() || -1;
+  }
+
+  peek() {
+    return this._arr[this._arr.length - 1] || -1;
+  }
+
+  size() {
+    return this._arr.length;
+  }
+
+  empty() {
+    return this._arr.length ? 0 : 1;
+  }
+}
+
+let stack = new Stack();
+let answer = [];
+
+for (let i = 0; i < input.length - 1; i++) {
+  let strArr = input[i].trim().split("");
+
+  stack._arr.length = 0;
+
+  for (let x of strArr) {
+    switch (x) {
+      case "(":
+        stack.push(x);
+        break;
+
+      case ")":
+        stack.peek() == "(" ? stack.pop() : stack.push(x);
+        break;
+
+      case "[":
+        stack.push(x);
+        break;
+
+      case "]":
+        stack.peek() == "[" ? stack.pop() : stack.push(x);
+        break;
+
+      default:
+        break;
     }
   }
 
-  console.log(answer.join("\n"));
-};
+  stack.size() ? answer.push("no") : answer.push("yes");
+}
 
-sol(input);
+console.log(answer.join("\n"));
 ```
 
 ---
@@ -84,39 +158,35 @@ const filePath = process.platform !== "linux" ? "./test.txt" : "dev/stdin";
 
 let input = require("fs").readFileSync(filePath).toString().trim().split("\n");
 
-function sol(input) {
-  let lStr = [...input[0].trim()];
-  let rStr = [];
+let lStr = [...input[0].trim()];
+let rStr = [];
 
-  for (let j = 2; j < input.length; j++) {
-    let [order, data] = input[j].trim().split(" ");
+for (let j = 2; j < input.length; j++) {
+  let [order, data] = input[j].trim().split(" ");
 
-    switch (order) {
-      case "P":
-        lStr.push(data);
-        break;
+  switch (order) {
+    case "P":
+      lStr.push(data);
+      break;
 
-      case "L":
-        lStr.length && rStr.push(lStr.pop());
-        break;
+    case "L":
+      lStr.length && rStr.push(lStr.pop());
+      break;
 
-      case "D":
-        rStr.length && lStr.push(rStr.pop());
-        break;
+    case "D":
+      rStr.length && lStr.push(rStr.pop());
+      break;
 
-      case "B":
-        lStr.length && lStr.pop();
-        break;
+    case "B":
+      lStr.length && lStr.pop();
+      break;
 
-      default:
-        break;
-    }
+    default:
+      break;
   }
-
-  console.log(lStr.join("") + rStr.reverse().join(""));
 }
 
-sol(input);
+console.log(lStr.join("") + rStr.reverse().join(""));
 ```
 
 ---
