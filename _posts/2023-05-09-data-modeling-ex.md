@@ -134,7 +134,7 @@ tags: [Workbench, ERD]
 
 속성의 **데이터 타입**, **길이**, **Null 값 허용 여부**, **기본 값**, **제약 조건** 등을 세부적으로 결정합니다.
 
-![ex-01-table-specs-01](/assets/img/ex-01-table-specs-01.png){: }
+![ex-01-table-specs-01](/assets/img/ex-01-table-specs-01.png)
 
 ---
 
@@ -202,13 +202,13 @@ tags: [Workbench, ERD]
 
 > 참고 글 : [DB 명명 규칙](https://psmin1994.github.io/posts/db-naming/)
 
-![ex-01-table-specs-02](/assets/img/ex-01-table-specs-02.png){: }
+![ex-01-table-specs-02](/assets/img/ex-01-table-specs-02.png)
 
 이제 Workbench에 테이블 명세서를 바탕으로 ER 다이어그램을 작성합니다.
 
 > 참고 글 : [물리적 데이터 모델링](https://psmin1994.github.io/posts/physical-modeling/)
 
-![ex-01-workbench-erd](/assets/img/ex-01-workbench-erd.png){: }
+![ex-01-workbench-erd](/assets/img/ex-01-workbench-erd.png)
 
 Workbench의 **Forward Engineer**를 활용해 테이블을 생성합니다.
 
