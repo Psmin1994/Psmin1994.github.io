@@ -1,7 +1,7 @@
 ---
 title: 상태 코드 Status Code
 author: Psmin
-data: 2023-02-03 18:26:31 +0900
+data: 2023-11-03 18:26:31 +0900
 categories: [Knowledge, CS]
 tags: [Status Code]
 ---

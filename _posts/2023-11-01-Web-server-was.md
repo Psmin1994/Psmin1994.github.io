@@ -1,7 +1,7 @@
 ---
 title: Web Server, Was, Reverse Proxy
 author: Psmin
-data: 2022-12-23 02:39:23 +0900
+data: 2023-11-01 02:39:23 +0900
 categories: [Knowledge, CS]
 tags: [Web Server, Was, Reverse Proxy]
 ---
