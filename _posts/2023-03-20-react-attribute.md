@@ -10,19 +10,19 @@ tags: [React, React Attribute]
 
 - 기본적인 DOM Element(div, span 등)은 **camelCase로 작성**
 
-  tabIndex, className 등 (‘data-’ 또는 ‘aria-’ 로 시작하는 Attribute는 제외)
+  > tabIndex, className 등 (‘data-’ 또는 ‘aria-’ 로 시작하는 Attribute는 제외)
 
 - HTML과 **다른 이름**을 가지는 Attribute
 
-  class => className, for => htmlFor 등
+  > class => className, for => htmlFor 등
 
 - HTML과 **다른 동작 방식**을 가진 Attribute
 
-  checked => defaultChecked, value => defaultValue 등
+  > checked => defaultChecked, value => defaultValue 등
 
 - React에서만 쓰이는 Attribute
 
-  key, dangerouslySetInnerHTML
+  > key, dangerouslySetInnerHTML
 
 ---
 
@@ -48,5 +48,6 @@ key는 다른 항목들 사이에서 **고유하게 식별할 수 있는 것을 
 
 대부분의 경우는 **data.id** 값으로 key로 사용합니다.
 
-key는 형제 사이에서만 고유한 값이어야 합니다.  
+key는 형제 사이에서만 고유한 값이어야 합니다.
+
 두 개의 다른 배열을 만들 때는 동일한 key를 사용할 수 있습니다.

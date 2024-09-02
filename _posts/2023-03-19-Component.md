@@ -36,7 +36,7 @@ tags: [React, Props, Component]
   }
   ```
 
-React의 관점에서 볼 때 위 두 가지 유형의 컴포넌트는 동일합니다.
+React의 관점에서 두 가지 유형의 컴포넌트는 동일합니다.
 
 ---
 
@@ -44,7 +44,7 @@ React의 관점에서 볼 때 위 두 가지 유형의 컴포넌트는 동일합
 
 **어떠한 값을 Component에 전달**해줄 때, props를 사용합니다.
 
-App 컴포넌트에서 Hello 컴포넌트를 사용할 때 name 값을 전달해주고싶을 때, props를 이용합니다.
+App 컴포넌트에서 Hello 컴포넌트로 name 값을 전달해주고싶을 때, props를 이용합니다.
 
 props는 **객체 형태로 전달**되며, **props.name 형태로 조회**합니다.
 
@@ -65,7 +65,7 @@ props는 **객체 형태로 전달**되며, **props.name 형태로 조회**합�
 
   function App() {
     return (
-      <Hello name="Psmin" />
+      <Hello name="react" />
     );
   }
 
@@ -130,23 +130,6 @@ props는 **객체 형태로 전달**되며, **props.name 형태로 조회**합�
   function Hello({ color, name }) {
     return <div style={{ color }}>Hello, {name}</div>
   }
-
-  export default Hello;
-  ```
-
-- props 기본값 설정
-
-  ```js
-  // Hello.js
-  import React from "react";
-
-  function Hello({ color, name }) {
-    return <div style={{ color }}>Hello, {name}</div>;
-  }
-
-  Hello.defaultProps = {
-    name: "이름없음",
-  };
 
   export default Hello;
   ```
