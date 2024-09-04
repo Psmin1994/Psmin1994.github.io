@@ -10,7 +10,7 @@ tags: [React, MUI]
 
 **Material UI**는 <u>Google의 Material Design을 구현하는 React 오픈소스 라이브러리</u>입니다.
 
-install 즉시 디자인을 구현할 수 있는 여러 컬렉션을 **컴포넌트를 사용하듯이 조립**해 쉽게 디자인을 할 수 있습니다.
+디자인을 구현할 수 있는 여러 컬렉션을 **컴포넌트를 사용하듯이 조립**해 쉽게 디자인을 할 수 있습니다.
 
 기본적으로 제공하는 컬렉션 외에도 **자유롭게 커스터마이징해서 사용**할 수 있습니다.
 
@@ -40,7 +40,7 @@ MUI는 사용할 **Component를 import해서 사용**하는 방식으로 아주 
 
 MUI 공식 홈페이지에서 **Component**를 확인해 **Button**을 가져와 보겠습니다.
 
-[Button 링크](https://mui.com/material-ui/react-button/)
+[MUI - Button](https://mui.com/material-ui/react-button/)
 
 ```js
 import Button from "@mui/material/Button";

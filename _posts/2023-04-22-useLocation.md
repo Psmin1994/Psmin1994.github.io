@@ -80,7 +80,7 @@ About링크를 누르면 locationObj에 location객체가 저장되고 locationO
 - **pathname** : path경로 문자열
 - **search** : ?부터 나오는 문자열 전부
 - **hash** : #부터 나오는 문자열 전부
-- **key** : 랜덤의 6글자 문자열
+- **key** : 랜덤 6글자 문자열
 
   > history stack에서 이 해당하는 location 객체를 찾기위한 고유의 문자열 키입니다.
 
@@ -126,12 +126,4 @@ About링크를 누르면 locationObj에 location객체가 저장되고 locationO
   // ...생략
 
   const [userId, setUserId] = useState(location.state.userId);
-  ```
-
-- Link를 통해서도 데이터를 보낼 수 있습니다.
-
-  ```js
-  <Link to={`/main`} state={{ test: "hello world" }}>
-    test
-  </Link>
   ```

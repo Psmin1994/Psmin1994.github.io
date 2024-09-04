@@ -10,7 +10,7 @@ tags: [React, State Share]
 
 어떤 컴포넌트의 State에 있는 데이터를 **여러 개의 하위 컴포넌트에서 공통적으로 사용**하는 경우를 말합니다.
 
-![Shared-State](/assets/img/shared-state.png){: }
+![Shared-State](/assets/img/shared-state.png)
 
 위 그림의 자식 컴포넌트 A, B는 부모 컴포넌트의 value에 각각 2, 3을 곱해서 표시하는 컴포넌트입니다.
 
