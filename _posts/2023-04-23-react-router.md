@@ -8,9 +8,9 @@ tags: [React, Router]
 
 ## React Routing
 
-React는 웹 사이트의 전체 페이지를 **하나의 페이지로 담아 동적으로 화면을 변환**해가며 보여줍니다.
+React는 웹 사이트의 전체 페이지를 <u>하나의 페이지로 담아 동적으로 화면을 변환</u>해가며 보여줍니다.
 
-이러한 방식을 `SPA (Single Page Application)`이라고 합니다.
+이러한 방식을 **SPA (Single Page Application)**이라고 합니다.
 
 SPA에서는 사용자에게 브라우저의 주소(URL)에 따른 다양한 화면을 보여줄 수 있습니다.
 
@@ -41,7 +41,7 @@ react-router-dom은 react-router 모듈에 dom이 바인딩 되어 있는 모듈
 
 - **BrowserRouter**
 
-  HTML5의 **history API를 이용해 UI 업데이트**를 합니다.
+  HTML5의 <u>history API를 이용해 UI 업데이트</u>를 합니다.
 
 - **HashRouter**
 
@@ -51,17 +51,17 @@ react-router-dom은 react-router 모듈에 dom이 바인딩 되어 있는 모듈
 
 - **Routes**
 
-  Route로 생성된 자식컴포넌트 중에 **매칭되는 첫번째 Route**를 렌더링 해줍니다.
+  Route로 생성된 자식컴포넌트 중에 <u>매칭되는 첫번째 Route</u>를 렌더링 해줍니다.
 
   이것을 이용해 특정 컴포넌트만 화면에 띄울 수 있습니다.
 
 - **Route**
 
-  페이지의 경로와 **렌더링할 페이지를 정의**하는 컴포넌트입니다.
+  페이지의 경로와 <u>렌더링할 페이지를 정의</u>하는 컴포넌트입니다.
 
 - **Link**
 
-  지정한 **URL로 이동**되게 해줍니다.
+  <u>지정한 URL로 이동</u>되게 해줍니다.
 
   아예 새로운 페이지를 불러오므로 기존 컴포넌트의 상태값은 소멸됩니다.
 
@@ -75,7 +75,7 @@ react-router-dom은 react-router 모듈에 dom이 바인딩 되어 있는 모듈
 
 2. **Route**로 컴포넌트별로 <u>path에 원하는 URL 주소를 할당</u>하고 <u>element에 URL별로 가져올 컴포넌트를 할당</u>합니다.
 
-3. 할당된 `Route`들을 `Routes`로 감싸줍니다.
+3. 할당된 **Route**들을 **Routes**로 감싸줍니다.
 
 ```js
 //App.js
@@ -83,7 +83,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Header from "./pages/Header";
 import Home from "./pages/Home";
 import Profile from "./pages/Profile";
-import Board from "./pagres/Board";
+import Board from "./pages/Board";
 
 function App() {
   return (
