@@ -1,12 +1,12 @@
 ---
-title: Carousel
+title: react-slick
 author: Psmin
 data: 2024-02-19 22:44:37 +0900
 categories: [Knowledge, ReactJS]
 tags: [Carousel]
 ---
 
-# 라이브러리를 이용해 Carousel을 구현해보자.
+# react-slick 라이브러리를 이용해 Carousel을 구현해보자.
 
 ---
 
@@ -24,7 +24,7 @@ Carousel은 다양한 콘텐츠를 스크롤 없이 한 화면에서 제공할 �
 
 ## react-slick
 
-react-slick은 React 프로젝트에서 Carousel을 구현 할 수 있는 라이브러리입니다.
+react-slick은 React 프로젝트에서 Carousel을 구현할 수 있는 라이브러리입니다.
 
 - **설치**
 
@@ -33,7 +33,7 @@ npm i react-slick
 npm i slick-carousel
 ```
 
-사용할 Component에 css파일을 import해서 사용합니다.
+사용할 Component에 기본 스타일 css파일을 import해서 사용합니다.
 
 ```jsx
 import "slick-carousel/slick/slick.css";
@@ -165,6 +165,7 @@ export default function SimpleSlider() {
 ```jsx
 import React from "react";
 import Slider from "react-slick";
+import CustomArrow from "./CustomArrow";
 import "css/Carousel.css"; // 추가적인 스타일이 오버라디이된 파일 import
 
 export default function SimpleSlider() {
@@ -233,5 +234,3 @@ const CustomArrow = (props) => {
 
 export default CustomArrow;
 ```
-
-![react-slick-custom-ex](/assets/img/react-slick-custom-ex.png)
