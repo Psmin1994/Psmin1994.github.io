@@ -1,5 +1,5 @@
 ---
-title: 영화 정보 제공 사이트 - 03
+title: 영화 정보 제공 사이트 (Server) - 03
 author: Psmin
 data: 2024-02-13 23:15:33 +0900
 categories: [Project, Movie Story]

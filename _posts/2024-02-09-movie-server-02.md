@@ -1,5 +1,5 @@
 ---
-title: 영화 정보 제공 사이트 - 02
+title: 영화 정보 제공 사이트 (Server) - 02
 author: Psmin
 data: 2024-02-09 22:44:37 +0900
 categories: [Project, Movie Story]
