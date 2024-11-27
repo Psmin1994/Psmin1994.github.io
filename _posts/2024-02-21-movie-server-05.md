@@ -20,11 +20,13 @@ tags: [validation]
 
 2. 비밀번호는 4 ~ 12 글자이어야 하고 영어, 숫자, 특수문자(!@#$%^&\*)가 하나 이상 포함되어야합니다.
 
+3. 이름은 한글로 작성해야합니다.
+
 ---
 
-### user.validation.js
+## 백엔드 측 validation
 
-`middleware`폴더에 `user.validation.js`파일을 만들어서 사용하겠습니다.
+`src`폴더 안에 `middleware`폴더를 만들고 `user.validation.js`파일을 작성합니다.
 
 > error 발생 시, 메세지를 담은 객체를 반환합니다.
 
@@ -95,18 +97,18 @@ const userValidator = {
 
     body("name")
       .notEmpty()
-      .withMessage("닉네임을 입력해주세요")
+      .withMessage("이름을 입력해주세요")
       .bail()
-      .isLength({ min: 3, max: 10 })
-      .withMessage("닉네임은 3글자 이상 10글자 미만이어야합니다")
+      .isLength({ min: 2, max: 8 })
+      .withMessage("이름은 2글자 이상 8글자 미만이어야합니다")
       .bail()
       .custom((value) => {
-        // 한글, 영어 대소문자, 숫자
-        let checkRegExp = /^[가-힣A-Za-z0-9]+$/;
+        // 정규 표현식
+        let checkRegExp = /^[가-힣]+$/;
 
         return checkRegExp.test(value);
       })
-      .withMessage("아이디는 한글, 숫자, 영어 대소문자로 구성해주세요")
+      .withMessage("이름은 한글로 구성해주세요")
       .bail(),
 
     validator,
