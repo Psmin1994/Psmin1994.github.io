@@ -1,5 +1,5 @@
 ---
-title: 영화 정보 제공 사이트 (Server) - 06
+title: Server - 06
 author: Psmin
 data: 2024-02-22 17:32:51 +0900
 categories: [Project, Movie Story]

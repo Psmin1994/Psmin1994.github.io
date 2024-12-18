@@ -1,5 +1,5 @@
 ---
-title: 영화 정보 제공 사이트 (Server) - 07
+title: Server - 07
 author: Psmin
 data: 2024-02-23 18:14:51 +0900
 categories: [Project, Movie Story]
