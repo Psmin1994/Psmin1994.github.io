@@ -14,7 +14,7 @@ tags: [crypto]
 
 ## 비밀번호 암호화 함수
 
-32바이트의 임의의 문자열을 salt로 만들고 crypto의 `pbkdf2Sync` 메서드를 사용해 암호화합니다.
+32 Byte의 임의의 문자열을 salt로 만들고 crypto의 `pbkdf2Sync` 메서드를 사용해 암호화합니다.
 
 ```js
 // 암호화된 비밀번호 생성 함수
@@ -23,7 +23,7 @@ const createPasswordAndSalt = (userInputPassword) => {
     const salt = crypto.randomBytes(32).toString("base64");
 
     const key = crypto
-      .pbkdf2Sync(userInputPassword, salt, 2000, 64, "sha512")
+      .pbkdf2Sync(userInputPassword, salt, 200, 8, "sha512")
       .toString("base64");
 
     return `${key}$${salt}`;
@@ -46,7 +46,7 @@ const userPasswordVerify = (userInputPassword, storedPasswordAndSalt) => {
     const [encrypted, salt] = storedPasswordAndSalt.split("$");
 
     const userInputEncrypted = crypto
-      .pbkdf2Sync(userInputPassword, salt, 2000, 64, "sha512")
+      .pbkdf2Sync(userInputPassword, salt, 200, 8, "sha512")
       .toString("base64");
 
     if (userInputEncrypted === encrypted) {
@@ -74,12 +74,13 @@ const createPasswordAndSalt = (userInputPassword) => {
   try {
     const salt = crypto.randomBytes(32).toString("base64");
 
+    // 매개변수 : 입력값, salt, 반복 횟수, Key의 길이, 해시알고리즘
     const key = crypto
-      .pbkdf2Sync(userInputPassword, salt, 2000, 64, "sha512")
+      .pbkdf2Sync(userInputPassword, salt, 200, 8, "sha512")
       .toString("base64");
 
     return `${key}$${salt}`;
-    // 암호화된 비밀번호와 임의로 생성된 salt를 '$'로 구분분
+    // 암호화된 비밀번호와 임의로 생성된 salt를 '$'로 구분
   } catch (err) {
     throw err;
   }
@@ -92,7 +93,7 @@ const userPasswordVerify = (userInputPassword, storedPasswordAndSalt) => {
     const [encrypted, salt] = storedPasswordAndSalt.split("$");
 
     const userInputEncrypted = crypto
-      .pbkdf2Sync(userInputPassword, salt, 2000, 64, "sha512")
+      .pbkdf2Sync(userInputPassword, salt, 200, 8, "sha512")
       .toString("base64");
 
     if (userInputEncrypted === encrypted) {
