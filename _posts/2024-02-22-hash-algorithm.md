@@ -1,12 +1,12 @@
 ---
-title: 대표적인 해시 알고리즘
+title: 해시 알고리즘
 author: Psmin
 data: 2024-02-22 23:07:02 +0900
 categories: [Knowledge, Nodejs]
-tags: [crypto, bcrypt, PBKDF2]
+tags: [scrypt, bcrypt, PBKDF2]
 ---
 
-# 대표적인 해시 알고리즘에 대해 알아보자.
+# 해시 알고리즘에 대해 알아보자.
 
 ---
 
