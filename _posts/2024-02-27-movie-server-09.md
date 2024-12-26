@@ -299,9 +299,21 @@ export default (passport) => {
 
 ---
 
+## router 추가
+
+`app.js` 파일에 **auth 라우터**를 추가합니다.
+
+```js
+import authRouter from "./src/routes/auth.route.js";
+
+app.use("/auth", authRouter);
+```
+
+---
+
 ## router 작성
 
-routes 폴더에 `auth.route.js` 파일을 생성합니다.
+routes 폴더에 `auth.route.js` 파일을 작성합니다.
 
 ```js
 import express from "express";
@@ -320,7 +332,7 @@ export default router;
 
 ## controller 작성
 
-controllers 폴더에 `auth.controller.js` 파일을 생성합니다.
+controllers 폴더에 `auth.controller.js` 파일을 작성합니다.
 
 ```js
 import passport from "passport";
