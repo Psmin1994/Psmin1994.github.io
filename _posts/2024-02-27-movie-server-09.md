@@ -16,7 +16,7 @@ Naver 계정을 통해 OAuth 인증을 구현해보겠습니다.
 
 ## OAuth 서비스 등록 (Naver)
 
-OAuth 2.0 로그인을 사용하기 위해서는 이용하고자 하는 **Resource Server**에 자신의 서비스(어플리케이션)을 등록해야합니다.
+OAuth 2.0 로그인을 사용하기 위해서는 이용하고자 하는 **Resource Server**에 자신의 어플리케이션을 등록해야합니다.
 
 [Naver Developers 페이지](https://developers.naver.com/main/)의 _'Application - 어플리케이션 등록'_ 으로 이동합니다.
 
@@ -51,7 +51,7 @@ _'Application - 내 어플리케이션'_ 에서 **Client ID**와 **Client Secret
 
 ## auth.model.js 작성
 
-OAuth를 통해 제공받은 데이터를 관리할 model 파일을 구현합니다.
+OAuth를 통해 제공받은 데이터를 관리합니다.
 
 ```js
 import pool from "../config/dbPool.js";
