@@ -1,7 +1,7 @@
 ---
 title: Server - 10
 author: Psmin
-data: 2024-02-27 03:23:21 +0900
+data: 2024-03-06 03:23:21 +0900
 categories: [Project, Movie Story]
 tags: [typescript]
 ---
