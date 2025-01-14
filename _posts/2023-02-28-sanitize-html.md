@@ -2,7 +2,7 @@
 title: sanitize-html 모듈
 author: Psmin
 data: 2023-02-28 14:53:41 +0900
-categories: [Knowledge, Nodejs]
+categories: [Knowledge, NodeJS]
 tags: [sanitize-html]
 ---
 

@@ -2,7 +2,7 @@
 title: 해시 알고리즘
 author: Psmin
 data: 2024-06-02 23:07:02 +0900
-categories: [Knowledge, Nodejs]
+categories: [Knowledge, NodeJS]
 tags: [scrypt, bcrypt, PBKDF2]
 ---
 

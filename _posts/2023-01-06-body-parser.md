@@ -2,7 +2,7 @@
 title: body-parser 모듈
 author: Psmin
 data: 2023-01-06 16:23:53 +0900
-categories: [Knowledge, Nodejs]
+categories: [Knowledge, NodeJS]
 tags: [Body-Parser]
 ---
 

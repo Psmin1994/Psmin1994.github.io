@@ -2,7 +2,7 @@
 title: puppeteer 모듈
 author: Psmin
 data: 2024-05-08 16:22:32 +0900
-categories: [Knowledge, Nodejs]
+categories: [Knowledge, NodeJS]
 tags: [puppeteer, Scraping]
 ---
 

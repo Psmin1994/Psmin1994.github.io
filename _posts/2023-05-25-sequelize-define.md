@@ -2,7 +2,7 @@
 title: sequelize 모듈 - define 메서드
 author: Psmin
 data: 2023-05-25 22:41:57 +0900
-categories: [Knowledge, Nodejs]
+categories: [Knowledge, NodeJS]
 tags: [sequelize, define]
 ---
 

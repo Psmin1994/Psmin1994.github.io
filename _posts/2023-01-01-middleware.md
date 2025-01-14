@@ -2,7 +2,7 @@
 title: 미들웨어 Middleware
 author: Psmin
 data: 2023-01-01 14:29:13 +0900
-categories: [Knowledge, Nodejs]
+categories: [Knowledge, NodeJS]
 tags: [Express, Middleware]
 ---
 
