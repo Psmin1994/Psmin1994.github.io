@@ -1,7 +1,7 @@
 ---
 title: Typescript
 author: Psmin
-data: 2024-03-01 15:23:17 +0900
+data: 2024-10-01 15:23:17 +0900
 categories: [Knowledge, Typescript]
 tags: [Typescript]
 ---
