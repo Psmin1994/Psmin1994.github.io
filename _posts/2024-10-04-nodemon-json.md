@@ -54,3 +54,37 @@ Nodemon을 사용할 때 설정을 관리하기 위한 JSON 파일입니다.
   "ignore": ["node_modules"]
 }
 ```
+
+---
+
+## 예시
+
+```json
+{
+  "exec": "tsc && tsc-alias && node app.js",
+  "watch": ["src"],
+  "ext": "js,ts,json",
+  "ignore": ["node_modules", "dist"],
+  "delay": "1000",
+  "restartable": "rs",
+  "verbose": true
+}
+```
+
+---
+
+`tsc && tsc-alias && node app.js`
+
+- **tsc**
+
+  TypeScript 컴파일러(tsc)를 실행하여 ts 파일을 js 파일로 변환합니다.
+
+- **tsc-alias**
+
+  컴파일된 JavaScript 파일에서 import 경로를 자동으로 변환해줍니다.
+
+  tsconfig.json의 baseUrl을 설정하고, 컴파일 후 tsc-alias를 실행하면, 경로가 자동으로 상대 경로로 수정됩니다.
+
+- **node app.js**
+
+  컴파일된 결과로 실행 가능한 JavaScript 파일을 Node.js를 사용하여 실행합니다.
