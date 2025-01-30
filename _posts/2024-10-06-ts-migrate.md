@@ -2,7 +2,7 @@
 title: 점진적 마이그레이션 (ts-migrate)
 author: Psmin
 data: 2024-10-06 03:23:21 +0900
-categories: [Project, TypeScript]
+categories: [Knowledge, Typescript]
 tags: [TypeScript]
 ---
 

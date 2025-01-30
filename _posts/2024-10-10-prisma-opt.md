@@ -2,7 +2,7 @@
 title: Prisma 조건 및 필터링
 author: Psmin
 data: 2024-10-10 23:07:02 +0900
-categories: [Knowledge, TypeScript]
+categories: [Knowledge, Typescript]
 tags: [prisma]
 ---
 

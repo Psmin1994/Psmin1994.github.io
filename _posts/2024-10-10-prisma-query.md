@@ -2,7 +2,7 @@
 title: Prisma 쿼리 메서드
 author: Psmin
 data: 2024-10-10 22:21:31 +0900
-categories: [Knowledge, TypeScript]
+categories: [Knowledge, Typescript]
 tags: [prisma]
 ---
 
