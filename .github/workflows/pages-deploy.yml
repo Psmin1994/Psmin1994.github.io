@@ -60,6 +60,7 @@ jobs:
         uses: actions/upload-pages-artifact@v3
         with:
           path: "_site" # "_site${{ steps.pages.outputs.base_path }}"
+          name: github-pages # 업로드된 아티팩트 이름을 'github-pages'로 설정
 
   deploy:
     environment:
