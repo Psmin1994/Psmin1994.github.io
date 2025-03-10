@@ -27,7 +27,7 @@ jobs:
 
     steps:
       - name: Checkout
-        uses: actions/checkout@v4
+        uses: actions/checkout@v3
         with:
           fetch-depth: 0
           # submodules: true
@@ -57,7 +57,7 @@ jobs:
           bundle exec htmlproofer _site --disable-external --check-html --allow_hash_href
 
       - name: Upload site artifact
-        uses: actions/upload-pages-artifact@v3
+        uses: actions/upload-pages-artifact@v2
         with:
           path: "_site" # "_site${{ steps.pages.outputs.base_path }}"
           name: github-pages # 업로드된 아티팩트 이름을 'github-pages'로 설정
@@ -71,6 +71,6 @@ jobs:
     steps:
       - name: Deploy to GitHub Pages
         id: deployment
-        uses: actions/deploy-pages@v1
+        uses: actions/deploy-pages@v3
         with:
           artifact_name: github-pages # 기본값 명시
