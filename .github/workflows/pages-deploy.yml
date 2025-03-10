@@ -77,6 +77,16 @@ jobs:
         with:
           name: github-pages
 
+      - name: List files in current directory
+        run: ls -al
+
+      - name: Check if _site exists
+        run: |
+          if [ ! -d "./_site" ]; then
+            echo "_site directory does not exist!"
+            exit 1
+          fi
+
       - name: Deploy to GitHub Pages
         run: |
           npm install -g gh-pages
