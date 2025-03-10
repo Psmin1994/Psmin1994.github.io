@@ -57,7 +57,7 @@ jobs:
           bundle exec htmlproofer _site --disable-external --check-html --allow_hash_href
 
       - name: Upload site artifact
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           path: "_site" # "_site${{ steps.pages.outputs.base_path }}"
           name: github-pages # 업로드된 아티팩트 이름을 'github-pages'로 설정
