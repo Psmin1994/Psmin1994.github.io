@@ -18,13 +18,13 @@ App Router는 클라이언트 컴포넌트에서만 Error Boundary를 지원하�
 
 **디렉토리 구조**
 
-```ts
+```tsx
 app/
-  page.tsx                 ← 홈
-  error.tsx                ← 전역 에러 처리
+  page.tsx                 # 홈
+  error.tsx                # 전역 에러 처리
   dashboard/
-    page.tsx               ← 이 안에서 에러 발생
-    error.tsx              ← 경로 전용 에러 처리
+    page.tsx               # 이 안에서 에러 발생
+    error.tsx              # 경로 전용 에러 처리
 ```
 
 ---
