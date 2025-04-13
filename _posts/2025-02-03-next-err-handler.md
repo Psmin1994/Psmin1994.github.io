@@ -2,7 +2,7 @@
 title: 에러 처리
 author: Psmin
 data: 2025-02-03 16:36:45 +0900
-categories: [Knowledge, NestJS]
+categories: [Knowledge, NextJS]
 tags: [Error Handler]
 ---
 

@@ -2,7 +2,7 @@
 title: App Router
 author: Psmin
 data: 2025-02-05 22:07:02 +0900
-categories: [Knowledge, NestJS]
+categories: [Knowledge, NextJS]
 tags: [App Router]
 ---
 
@@ -149,9 +149,7 @@ export default Page;
 
 ### 로딩 처리
 
-`Suspense`는 비동기 컴포넌트가 로딩될 동안 **대체 UI(fallback)**를 지정하는 컴포넌트입니다.
-
-App Router에서는 주로 서버 컴포넌트가 데이터를 가져오는 동안 사용합니다.
+App Router의의 `Suspense`를 사용해서 로딩 처리
 
 ```tsx
 <Suspense fallback={<div>로딩 중...</div>}>
@@ -163,7 +161,7 @@ App Router에서는 주로 서버 컴포넌트가 데이터를 가져오는 동�
 
 ### 에러 처리
 
-Next.js App Router의 `error.tsx` 사용해 에러 처리를 구현해보겠습니다.
+App Router의 `error.tsx` 사용해 에러 처리
 
 ```tsx
 // app/blog/[id]/error.tsx

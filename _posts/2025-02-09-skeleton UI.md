@@ -2,7 +2,7 @@
 title: Skeleton UI
 author: Psmin
 data: 2025-02-09 02:13:02 +0900
-categories: [Knowledge, NestJS]
+categories: [Knowledge, NextJS]
 tags: [Suspense, Skeleton UI]
 ---
 
