@@ -1,5 +1,5 @@
 ---
-title: axios VS fetch
+title: fetch
 author: Psmin
 data: 2025-02-09 15:12:06 +0900
 categories: [Knowledge, NextJS]
