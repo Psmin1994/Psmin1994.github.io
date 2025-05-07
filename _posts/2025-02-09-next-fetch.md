@@ -145,3 +145,44 @@ SSR처럼 항상 새 데이터를 가져옵니다.
 // SSR: 항상 최신 데이터 (캐싱 없음)
 fetch(url, { cache: "no-store" });
 ```
+
+---
+
+## 응답 구조
+
+fetch의 응답은 Response 객체로 제공됩니다.
+
+- **status** : HTTP 응답 상태 코드
+- **statusText** : HTTP 상태 코드에 대한 텍스트 설명 (예: "OK", "Not Found")
+- **headers** : 응답 헤더 정보
+- **ok** : 응답이 성공적이면 true, 실패하면 false
+- **json()** : 응답 본문을 JSON 형식으로 파싱하여 반환하는 메서드
+- **text()** : 응답 본문을 텍스트 형식으로 반환하는 메서드
+- **blob()** : 응답 본문을 Blob 객체로 반환하는 메서드
+- **arrayBuffer()** : 응답 본문을 ArrayBuffer 객체로 반환하는 메서드
+
+---
+
+## fetch와 await 사용
+
+```tsx
+async function fetchData() {
+  try {
+    const response = await fetch(
+      "https://jsonplaceholder.typicode.com/posts/1"
+    );
+
+    // 응답 상태가 성공적이라면
+    if (!response.ok) {
+      throw new Error("Network response was not ok");
+    }
+
+    const data = await response.json(); // 응답 본문을 JSON으로 변환
+    console.log("Fetched Data:", data); // 응답 데이터 출력
+  } catch (error) {
+    console.error("Fetch Error:", error); // 오류 처리
+  }
+}
+
+fetchData();
+```

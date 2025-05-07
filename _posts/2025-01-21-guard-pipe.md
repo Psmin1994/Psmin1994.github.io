@@ -1,5 +1,5 @@
 ---
-title: generate
+title: guard, pipe
 author: Psmin
 data: 2025-01-21 22:07:02 +0900
 categories: [Knowledge, NestJS]
